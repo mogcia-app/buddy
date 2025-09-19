@@ -15,7 +15,7 @@ export default function Restaurant() {
         {/* 背景画像 */}
         <div className="absolute inset-0 -z-10">
           <Image
-            src="/pexels-ella-olsson-572949-1640770.jpg"
+            src="/pexels-janetrangdoan-892649.jpg"
             alt="美味しい料理の背景"
             fill
             priority

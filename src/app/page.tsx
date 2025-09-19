@@ -134,7 +134,10 @@ export default function Home() {
       <section id="services" className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">SERVICE</h2>
+            <div className="flex items-center mb-8">
+              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">SERVICE</h2>
+            </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               食から始まった私たちの事業は、今やAI技術まで幅広い領域をカバー。<br className="hidden md:block" />
               お客様の課題に対して、最適なソリューションを提供します。
@@ -143,66 +146,7 @@ export default function Home() {
 
           {/* サービスカード */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* 厨房委託業 */}
-            <Link href="/kitchen-management" className="group block animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-              <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
-                <div className="mb-6 flex justify-between items-start">
-                  <div>
-                    <p className="text-sm text-gray-500 mb-2">介護施設・企業食堂の運営サポート</p>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">厨房委託業</h3>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider">KITCHEN<br />MANAGEMENT</p>
-                  </div>
-                  <div className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all duration-300">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  介護施設や企業食堂の厨房運営をトータルサポート。栄養管理から衛生管理まで、プロフェッショナルが安心・安全な食事づくりをお手伝いします。
-                </p>
-                <div className="mt-6 relative h-48 overflow-hidden">
-                  <Image
-                    src="/pexels-ella-olsson-572949-1640777.jpg"
-                    alt="新鮮な野菜と健康的な食事"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </Link>
-
-            {/* 飲食事業 */}
-            <Link href="/restaurant" className="group block animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-              <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
-                <div className="mb-6 flex justify-between items-start">
-                  <div>
-                    <p className="text-sm text-gray-500 mb-2">レストラン・ケータリングサービス</p>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">飲食事業</h3>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider">RESTAURANT</p>
-                  </div>
-                  <div className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all duration-300">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  レストラン運営やケータリングサービスを通じて、美味しい食事体験を提供。イベントや企業向けサービスも承ります。
-                </p>
-                <div className="mt-6 relative h-48 overflow-hidden">
-                  <Image
-                    src="/pexels-ella-olsson-572949-1640770.jpg"
-                    alt="美味しいヘルシーボウル料理"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </Link>
-
+           
             {/* Web制作 */}
             <Link href="/web-development" className="group block animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
@@ -263,6 +207,67 @@ export default function Home() {
               </div>
             </Link>
 
+             {/* 厨房委託業 */}
+             <Link href="/kitchen-management" className="group block animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+              <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
+                <div className="mb-6 flex justify-between items-start">
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">介護施設・企業食堂の運営サポート</p>
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">厨房委託業</h3>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider">KITCHEN<br />MANAGEMENT</p>
+                  </div>
+                  <div className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all duration-300">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  介護施設や企業食堂の厨房運営をトータルサポート。栄養管理から衛生管理まで、プロフェッショナルが安心・安全な食事づくりをお手伝いします。
+                </p>
+                <div className="mt-6 relative h-48 overflow-hidden">
+                  <Image
+                    src="/pexels-ella-olsson-572949-1640777.jpg"
+                    alt="新鮮な野菜と健康的な食事"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </Link>
+
+            {/* 飲食事業 */}
+            <Link href="/restaurant" className="group block animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+              <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
+                <div className="mb-6 flex justify-between items-start">
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">レストラン・ケータリングサービス</p>
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">飲食事業</h3>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider">RESTAURANT</p>
+                  </div>
+                  <div className="text-gray-400 group-hover:text-gray-900 group-hover:translate-x-1 transition-all duration-300">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                  </div>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  レストラン運営やケータリングサービスを通じて、美味しい食事体験を提供。イベントや企業向けサービスも承ります。
+                </p>
+                <div className="mt-6 relative h-48 overflow-hidden">
+                  <Image
+                    src="/pexels-janetrangdoan-892649.jpg"
+                    alt="美味しいヘルシーボウル料理"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </Link>
+
+
             {/* AI業務改善ツール */}
             <Link href="/ai-solutions" className="group block md:col-span-2 animate-fade-in-up opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
               <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-500 relative">
@@ -309,11 +314,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* お知らせセクション */}
+      <section className="py-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+            <div className="flex items-center mb-8">
+              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">NEWS</h2>
+            </div>
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
+              最新のお知らせをお届けします。
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between mb-8 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">お知らせ</h3>
+            <Link 
+              href="/news" 
+              className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >
+              すべて見る →
+            </Link>
+          </div>
+
+          <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="text-center py-12">
+              <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <p className="text-gray-600">お知らせはありません</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* STRENGTHセクション - バディの強み */}
       <section className="py-32 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">STRENGTH</h2>
+            <div className="flex items-center mb-8">
+              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">STRENGTH</h2>
+            </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               食から始まったバディだからこそ提供できる、他にはない強みがあります。<br className="hidden md:block" />
               多角的な事業展開により、お客様の様々なニーズにワンストップで対応いたします。
@@ -321,13 +363,17 @@ export default function Home() {
           </div>
 
           {/* 強みカードエリア */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white p-8 h-64 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 mb-16">
+            <div className="bg-white p-8 h-70 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600">
-                    <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16l2 8H4l-2-8zM6 1v3M10 1v3M14 1v3"/>
-                  </svg>
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                  {/* 食の安心・安全アイコン */}
+                  <Image
+                    src="/16545_color.svg"
+                    alt="食の安心・安全"
+                    width={50}
+                    height={50}
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">食の安心・安全</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -335,13 +381,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-white p-8 h-64 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="bg-white p-8 h-70 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
-                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-                  </svg>
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                  {/* 一気通貫サービスアイコン */}
+                  <Image
+                    src="/11772 (1).svg"
+                    alt="一気通貫サービス"
+                    width={50}
+                    height={50}
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">一気通貫サービス</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -349,15 +398,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="bg-white p-8 h-64 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
+            <div className="bg-white p-8 h-70 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
               <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-purple-600">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                  {/* 真のパートナーシップアイコン */}
+                  <Image
+                    src="/17053_color.svg"
+                    alt="真のパートナーシップ"
+                    width={90}
+                    height={90}
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">真のパートナーシップ</h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -380,7 +430,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">ABOUT</h2>
+            <div className="flex items-center mb-8">
+              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">ABOUT</h2>
+            </div>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
               バディは「食」から始まった会社です。厨房委託業や飲食事業で培った「安心・安全」への想いを基盤に、<br className="hidden md:block" />
               Web制作、SNS運用、AI技術まで事業領域を拡げています。
@@ -404,12 +457,246 @@ export default function Home() {
           </div>
             <div className="relative h-96 overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-500 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <Image
-                src="/pexels-pavel-danilyuk-8112186.jpg"
+                src="/pexels-fauxels-3184635.jpg"
                 alt="ビジネスパートナーシップ"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/25 to-black/25"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ブログセクション */}
+      <section className="py-32 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+            <div className="flex items-center mb-8">
+              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">BLOG</h2>
+            </div>
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
+              事業の最新情報や業界のトレンドをお届けします。
+            </p>
+          </div>
+
+          <div className="flex items-center justify-between mb-8 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900">ブログ</h3>
+            <Link 
+              href="/blog" 
+              className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+            >
+              すべて見る →
+            </Link>
+          </div>
+
+          <div className="relative animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            {/* 左矢印 */}
+            <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+
+            {/* 右矢印 */}
+            <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
+              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+              {/* ブログカード1 - ビジネス */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-100 relative">
+                  <div className="flex items-center justify-center h-full">
+                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
+                      ビジネス
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    飲食店経営の成功ポイント
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    飲食店経営において成功するためのポイントを立地選びからマーケティングまで解説します。
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      2024/1/15
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      6分
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ブログカード2 - テクノロジー */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-100 relative">
+                  <div className="flex items-center justify-center h-full">
+                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
+                      テクノロジー
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    AI技術で業務効率化を実現する方法
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    AI技術を活用した業務効率化の方法と注意点について解説します。
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      2024/1/12
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      8分
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ブログカード3 - 食 */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-100 relative">
+                  <div className="flex items-center justify-center h-full">
+                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
+                      食
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    厨房委託業で培った「安心・安全」の想い
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    厨房委託業で培った「安心・安全」への想いを、全ての事業に活かしています。
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      2024/1/10
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      5分
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ブログカード4 - ビジネス */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-100 relative">
+                  <div className="flex items-center justify-center h-full">
+                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
+                      ビジネス
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    真のパートナーシップとは何か
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    単なる業務委託ではなく、お客様の「バディ」として長期的な成功を共に目指します。
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      2024/1/8
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      7分
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* ブログカード5 - テクノロジー */}
+              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="aspect-video bg-gray-100 relative">
+                  <div className="flex items-center justify-center h-full">
+                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
+                      テクノロジー
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    Webサイト制作で重要なUXデザインの考え方
+                  </h4>
+                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    Webサイト制作におけるUXデザインの重要性と改善ポイントについて解説します。
+                  </p>
+                  <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      2024/1/5
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      9分
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -433,7 +720,10 @@ export default function Home() {
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-8">RECRUIT</h2>
+            <div className="flex justify-center items-center mb-8">
+            
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">RECRUIT</h2>
+            </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
               食から始まり、デジタル領域まで幅広く事業を展開するバディでは、<br className="hidden md:block" />
               多様な分野で活躍できる環境とチャレンジの機会を提供しています。
@@ -450,6 +740,8 @@ export default function Home() {
          
         </div>
       </section>
+
+     
 
       <ContactSection />
       <Footer />

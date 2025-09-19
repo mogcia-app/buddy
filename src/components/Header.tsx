@@ -7,6 +7,7 @@ import Image from 'next/image';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b-4 border-black shadow-lg">
@@ -28,7 +29,7 @@ export default function Header() {
 
           {/* PCナビ */}
           <nav className="hidden md:flex space-x-8 items-center">
-            <Link href="/about" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">会社概要</Link>
+            <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">会社概要</Link>
             
             {/* 事業内容ドロップダウン */}
             <div 
@@ -36,7 +37,7 @@ export default function Header() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="text-gray-700 hover:text-indigo-600 transition-colors font-medium flex items-center">
+              <button className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center">
                 事業内容
                 <svg className={`w-4 h-4 ml-1 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -45,7 +46,7 @@ export default function Header() {
               
               {/* メガメニュー */}
               {isServicesOpen && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-100/50 p-8 z-50">
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] max-w-[90vw] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-100/50 p-8 z-50 hidden md:block">
                   <div className="mb-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-2">事業内容</h3>
                     <p className="text-sm text-gray-600">食からデジタルまで、多角的なソリューションをご提供</p>
@@ -139,7 +140,7 @@ export default function Header() {
                   </div>
                   
                   <div className="mt-6 pt-6 border-t border-gray-100 text-center">
-                    <Link href="/about" className="text-sm text-gray-600 hover:text-indigo-600 transition-colors">
+                    <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                       全ての事業について詳しく見る →
                     </Link>
                   </div>
@@ -147,14 +148,14 @@ export default function Header() {
               )}
             </div>
             
-            <Link href="/sdgs" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">社会への取り組み</Link>
-            <Link href="/recruit" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">採用情報</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-indigo-600 transition-colors font-medium">お問い合わせ</Link>
+            <Link href="/sdgs" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">社会への取り組み</Link>
+            <Link href="/recruit" className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-900 hover:text-white rounded-lg transition-all duration-300 font-medium">採用情報</Link>
+            <Link href="/contact" className="px-4 py-2 bg-black text-white hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium">お問い合わせ</Link>
           </nav>
 
           {/* モバイルメニューボタン */}
           <button
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:text-indigo-600 hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="メニューを開く"
           >
@@ -174,7 +175,7 @@ export default function Header() {
             <nav className="flex flex-col space-y-4">
               <Link 
                 href="/about" 
-                className="text-gray-700 hover:text-indigo-600 transition-colors py-2 font-medium"
+                className="text-gray-700 hover:text-gray-900 transition-colors py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 会社概要
@@ -182,61 +183,73 @@ export default function Header() {
               
               {/* モバイル事業内容 */}
               <div className="space-y-2">
-                <div className="text-gray-500 text-sm font-medium px-2">事業内容</div>
-                <Link 
-                  href="/kitchen-management" 
-                  className="text-gray-700 hover:text-indigo-600 transition-colors py-2 pl-4 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
+                <button 
+                  onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+                  className="flex items-center justify-between w-full text-gray-700 hover:text-gray-900 transition-colors py-2 font-medium"
                 >
-                  厨房委託業
-                </Link>
-                <Link 
-                  href="/restaurant" 
-                  className="text-gray-700 hover:text-indigo-600 transition-colors py-2 pl-4 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  飲食事業
-                </Link>
-                <Link 
-                  href="/web-development" 
-                  className="text-gray-700 hover:text-indigo-600 transition-colors py-2 pl-4 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  HP作成・Web制作
-                </Link>
-                <Link 
-                  href="/sns-management" 
-                  className="text-gray-700 hover:text-indigo-600 transition-colors py-2 pl-4 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  SNS運用代行
-                </Link>
-                <Link 
-                  href="/ai-solutions" 
-                  className="text-gray-700 hover:text-indigo-600 transition-colors py-2 pl-4 text-sm"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AI業務改善ツール
-                </Link>
+                  事業内容
+                  <svg className={`w-4 h-4 transition-transform ${isMobileServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isMobileServicesOpen && (
+                  <div className="space-y-2 pl-4">
+                    <Link 
+                      href="/kitchen-management" 
+                      className="block text-gray-700 hover:text-gray-900 transition-colors py-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      厨房委託業
+                    </Link>
+                    <Link 
+                      href="/restaurant" 
+                      className="block text-gray-700 hover:text-gray-900 transition-colors py-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      飲食事業
+                    </Link>
+                    <Link 
+                      href="/web-development" 
+                      className="block text-gray-700 hover:text-gray-900 transition-colors py-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      HP作成・Web制作
+                    </Link>
+                    <Link 
+                      href="/sns-management" 
+                      className="block text-gray-700 hover:text-gray-900 transition-colors py-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      SNS運用代行
+                    </Link>
+                    <Link 
+                      href="/ai-solutions" 
+                      className="block text-gray-700 hover:text-gray-900 transition-colors py-2 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      AI業務改善ツール
+                    </Link>
+                  </div>
+                )}
               </div>
               
               <Link 
                 href="/sdgs" 
-                className="text-gray-700 hover:text-indigo-600 transition-colors py-2 font-medium"
+                className="text-gray-700 hover:text-gray-900 transition-colors py-2 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 社会への取り組み
               </Link>
               <Link 
                 href="/recruit" 
-                className="text-gray-700 hover:text-indigo-600 transition-colors py-2 font-medium"
+                className="inline-block px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-900 hover:text-white rounded-lg transition-all duration-300 font-medium text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 採用情報
               </Link>
               <Link 
                 href="/contact" 
-                className="text-gray-700 hover:text-indigo-600 transition-colors py-2 font-medium"
+                className="inline-block px-4 py-2 bg-black text-white hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
                 お問い合わせ
