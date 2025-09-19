@@ -14,7 +14,6 @@ interface NewsItem {
 }
 
 export default function NewsList() {
-  const router = useRouter();
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');

@@ -10,19 +10,23 @@ import {
   where,
   orderBy,
   limit,
-  Timestamp,
-  DocumentData,
-  QueryDocumentSnapshot
+  Timestamp
 } from 'firebase/firestore';
 import { db } from './firebase';
 import { NewsItem, BlogItem, COLLECTIONS } from '../types/firebase';
 
 // ユーティリティ関数
-const convertTimestamp = (timestamp: any): Date => {
-  if (timestamp && timestamp.toDate) {
-    return timestamp.toDate();
+const convertTimestamp = (timestamp: Timestamp | Date | null | undefined): Date => {
+  if (timestamp && typeof timestamp === 'object' && 'toDate' in timestamp) {
+    return (timestamp as Timestamp).toDate();
   }
-  return new Date(timestamp);
+  if (timestamp instanceof Date) {
+    return timestamp;
+  }
+  if (timestamp) {
+    return new Date(timestamp as string | number);
+  }
+  return new Date();
 };
 
 const createSlug = (title: string): string => {
@@ -127,7 +131,7 @@ export const createNews = async (newsData: Omit<NewsItem, 'id' | 'createdAt' | '
 export const updateNews = async (id: string, newsData: Partial<NewsItem>): Promise<boolean> => {
   try {
     const docRef = doc(db, COLLECTIONS.NEWS, id);
-    const updateData: any = {
+    const updateData: Record<string, unknown> = {
       ...newsData,
       updatedAt: Timestamp.now()
     };
@@ -276,7 +280,7 @@ export const createBlog = async (blogData: Omit<BlogItem, 'id' | 'createdAt' | '
 export const updateBlog = async (id: string, blogData: Partial<BlogItem>): Promise<boolean> => {
   try {
     const docRef = doc(db, COLLECTIONS.BLOG, id);
-    const updateData: any = {
+    const updateData: Record<string, unknown> = {
       ...blogData,
       updatedAt: Timestamp.now()
     };

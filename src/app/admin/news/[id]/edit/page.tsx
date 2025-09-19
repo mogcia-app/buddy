@@ -1,17 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
-
-interface NewsItem {
-  id: string;
-  title: string;
-  content: string;
-  excerpt: string;
-  category: string;
-  publishedAt: string;
-  isImportant: boolean;
-}
 
 export default function EditNews() {
   const router = useRouter();
@@ -28,11 +18,7 @@ export default function EditNews() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => {
-    fetchNewsItem();
-  }, [id]);
-
-  const fetchNewsItem = async () => {
+  const fetchNewsItem = useCallback(async () => {
     try {
       const response = await fetch(`/api/news/${id}`);
       const data = await response.json();
@@ -58,7 +44,11 @@ export default function EditNews() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
+
+  useEffect(() => {
+    fetchNewsItem();
+  }, [fetchNewsItem]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

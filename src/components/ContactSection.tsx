@@ -15,8 +15,6 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({
-  title = "お気軽にお問い合わせください",
-  subtitle = "Contact Us",
   description = "どのような事業でお困りでも、専門スタッフが丁寧にご相談をお受けいたします。まずはお気軽にお声がけください。",
   phone = "0952-97-6705",
   phoneHours = "平日 9:00〜18:00",
