@@ -54,9 +54,9 @@ const blogData = [
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params;
+  const { id } = await params;
 
   const blogItem = blogData.find(item => item.id === id);
 

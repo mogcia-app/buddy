@@ -44,7 +44,7 @@ export default function EditNews() {
     } finally {
       setLoading(false);
     }
-  }, [id]);
+  }, [id, router]);
 
   useEffect(() => {
     fetchNewsItem();
