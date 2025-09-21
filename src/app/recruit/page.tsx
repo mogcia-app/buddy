@@ -13,22 +13,20 @@ export default function Recruit() {
       <Header />
 
       {/* ヒーロー */}
-      <section className="relative bg-green-700 text-white py-20">
-        <div className="absolute inset-0 bg-[url('/images/tesuto2.jpg')] bg-cover bg-center opacity-20" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block rounded-full bg-white/90 text-green-800 text-sm font-semibold px-3 py-1 mb-4">
+      <section className="bg-white py-20 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block bg-gray-100 text-gray-800 text-sm font-semibold px-4 py-2 mb-6">
             採用情報
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">「食」で地域を支える仲間を募集しています</h1>
-          <p className="mt-4 text-lg md:text-xl text-white/90">
-            介護施設の厨房を、“安心・安全・あたたかさ”で満たす仕事。<br className="hidden md:inline" />
+          <h1 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">「食」で地域を支える仲間を募集しています</h1>
+          <div className="w-20 h-px bg-gray-300 mx-auto my-8 mt-4"></div>
+          <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            介護施設の厨房を、"安心・安全・あたたかさ"で満たす仕事。<br className="hidden md:inline" />
             経験者はもちろん、未経験の方も丁寧にサポートします。
           </p>
           <a
             href="#positions"
-            className="inline-flex items-center justify-center mt-8 rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-gray-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-yellow-300 hover:shadow-xl"
+            className="inline-flex items-center justify-center mt-8 bg-gray-900 px-8 py-4 text-lg font-medium text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
           >
             募集中の職種を見る
           </a>
@@ -39,19 +37,25 @@ export default function Recruit() {
       <section id="recruit" className="sr-only" aria-hidden />
 
       {/* 会社の想い / 働く環境 */}
-      <section className="py-16 md:py-20 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-gray-800">安心・安全を最優先</h3>
-            <p className="mt-2 text-gray-600">衛生基準の徹底、アレルギー配慮、栄養バランスを大切に。高齢者の方に寄り添った食事提供を行います。</p>
+      <section className="py-16 md:py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-gray-900 mb-6">私たちの想い</h2>
+            <div className="w-16 h-px bg-gray-300 mx-auto"></div>
           </div>
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-gray-800">チームで支える厨房</h3>
-            <p className="mt-2 text-gray-600">調理・栄養・衛生の専門スタッフが連携。新人には先輩がついて育成します。</p>
-          </div>
-          <div className="rounded-2xl bg-white p-6 shadow-sm">
-            <h3 className="text-lg font-bold text-gray-800">働きやすいシフト</h3>
-            <p className="mt-2 text-gray-600">希望シフトの調整可。ライフスタイルに合わせた勤務形態をご相談ください。</p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 shadow-lg border border-gray-200">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">安心・安全を最優先</h3>
+              <p className="text-gray-600 leading-relaxed">衛生基準の徹底、アレルギー配慮、栄養バランスを大切に。高齢者の方に寄り添った食事提供を行います。</p>
+            </div>
+            <div className="bg-white p-8 shadow-lg border border-gray-200">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">チームで支える厨房</h3>
+              <p className="text-gray-600 leading-relaxed">調理・栄養・衛生の専門スタッフが連携。新人には先輩がついて育成します。</p>
+            </div>
+            <div className="bg-white p-8 shadow-lg border border-gray-200">
+              <h3 className="text-lg font-medium text-gray-900 mb-4">働きやすいシフト</h3>
+              <p className="text-gray-600 leading-relaxed">希望シフトの調整可。ライフスタイルに合わせた勤務形態をご相談ください。</p>
+            </div>
           </div>
         </div>
       </section>
@@ -60,13 +64,13 @@ export default function Recruit() {
       <section id="positions" className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">募集中の職種</h2>
-            <div className="w-24 h-1 bg-green-600 mx-auto mt-4" />
+            <h2 className="text-3xl font-light text-gray-900 mb-6">募集中の職種</h2>
+            <div className="w-16 h-px bg-gray-300 mx-auto" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* 調理スタッフ */}
-            <article className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <article className="border border-gray-200 p-8 shadow-lg bg-white">
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">正社員 / パート</span>
                 <span className="text-xs text-gray-500">未経験OK</span>
@@ -87,13 +91,13 @@ export default function Recruit() {
                 <li>HACCPに準拠した衛生管理の研修あり</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="/contact#contact" className="rounded-xl bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700 transition">応募する</a>
-                <a href="/contact" className="rounded-xl border border-green-600 px-5 py-3 text-green-700 font-semibold hover:bg-green-50 transition">まずは相談</a>
+                <a href="/contact#contact" className="bg-gray-900 px-6 py-3 text-white font-medium hover:bg-gray-800 transition">応募する</a>
+                <a href="/contact" className="border border-gray-900 px-6 py-3 text-gray-900 font-medium hover:bg-gray-50 transition">まずは相談</a>
               </div>
             </article>
 
             {/* 栄養士・管理栄養士 */}
-            <article className="rounded-2xl border border-gray-200 p-6 shadow-sm">
+            <article className="border border-gray-200 p-8 shadow-lg bg-white">
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">正社員 / 契約</span>
                 <span className="text-xs text-gray-500">資格保有者歓迎</span>
@@ -114,13 +118,13 @@ export default function Recruit() {
                 <li>リモート相談や時短勤務も応相談</li>
               </ul>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="/contact#contact" className="rounded-xl bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700 transition">応募する</a>
-                <a href="/contact" className="rounded-xl border border-green-600 px-5 py-3 text-green-700 font-semibold hover:bg-green-50 transition">まずは相談</a>
+                <a href="/contact#contact" className="bg-gray-900 px-6 py-3 text-white font-medium hover:bg-gray-800 transition">応募する</a>
+                <a href="/contact" className="border border-gray-900 px-6 py-3 text-gray-900 font-medium hover:bg-gray-50 transition">まずは相談</a>
               </div>
             </article>
 
             {/* 衛生管理 / 品質管理 */}
-            <article className="rounded-2xl border border-gray-200 p-6 shadow-sm md:col-span-2">
+            <article className="border border-gray-200 p-8 shadow-lg bg-white md:col-span-2">
               <div className="flex items-center gap-2">
                 <span className="inline-flex items-center rounded-full bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">パート / 契約</span>
                 <span className="text-xs text-gray-500">経験者優遇</span>
@@ -136,8 +140,8 @@ export default function Recruit() {
                 <div><dt className="text-gray-500">資格</dt><dd className="font-medium text-gray-800">食品衛生責任者 等あれば尚可</dd></div>
               </dl>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="/contact#contact" className="rounded-xl bg-green-600 px-5 py-3 text-white font-semibold hover:bg-green-700 transition">応募する</a>
-                <a href="/contact" className="rounded-xl border border-green-600 px-5 py-3 text-green-700 font-semibold hover:bg-green-50 transition">まずは相談</a>
+                <a href="/contact#contact" className="bg-gray-900 px-6 py-3 text-white font-medium hover:bg-gray-800 transition">応募する</a>
+                <a href="/contact" className="border border-gray-900 px-6 py-3 text-gray-900 font-medium hover:bg-gray-50 transition">まずは相談</a>
               </div>
             </article>
           </div>
@@ -145,22 +149,22 @@ export default function Recruit() {
       </section>
 
       {/* 福利厚生・働くメリット */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">働くメリット</h2>
-            <div className="w-24 h-1 bg-green-600 mx-auto mt-4" />
+            <h2 className="text-3xl font-light text-gray-900 mb-6">働くメリット</h2>
+            <div className="w-16 h-px bg-gray-300 mx-auto" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: '充実の研修制度', text: 'HACCPや衛生管理、嚥下・アレルギー対応など、実務で役立つ研修を用意。未経験でも安心してスタートできます。' },
               { title: '柔軟なシフト', text: '時短・週3日〜などライフスタイルに合わせた働き方が可能。家庭や学業との両立を応援します。' },
               { title: '安心のサポート体制', text: '各施設に担当者がつき、困りごとをすぐ相談できる体制を整えています。' },
             ].map((b, i) => (
-              <div key={i} className="rounded-2xl bg-white p-6 shadow-sm">
-                <h3 className="text-lg font-bold text-gray-800">{b.title}</h3>
-                <p className="mt-2 text-gray-600">{b.text}</p>
+              <div key={i} className="bg-white p-8 shadow-lg border border-gray-200">
+                <h3 className="text-lg font-medium text-gray-900 mb-4">{b.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{b.text}</p>
               </div>
             ))}
           </div>
@@ -170,8 +174,10 @@ export default function Recruit() {
       {/* 選考フロー */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 text-center">選考フロー</h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mt-4 mb-10" />
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-gray-900 mb-6">選考フロー</h2>
+            <div className="w-16 h-px bg-gray-300 mx-auto" />
+          </div>
           <ol className="grid md:grid-cols-4 gap-6 text-center">
             {[
               { n: '1', t: '応募' , d: 'フォーム or お電話' },
@@ -179,15 +185,15 @@ export default function Recruit() {
               { n: '3', t: '見学' , d: '職場見学・体験（任意）' },
               { n: '4', t: '内定' , d: 'シフト調整・入社手続き' },
             ].map((s, i) => (
-              <li key={i} className="relative rounded-2xl border border-gray-200 px-6 py-8 shadow-sm">
-                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-green-600 font-bold text-white">{s.n}</div>
-                <h3 className="mt-3 font-bold text-gray-900">{s.t}</h3>
+              <li key={i} className="border border-gray-200 px-6 py-8 shadow-lg bg-white">
+                <div className="mx-auto flex h-10 w-10 items-center justify-center bg-gray-900 font-medium text-white">{s.n}</div>
+                <h3 className="mt-3 font-medium text-gray-900">{s.t}</h3>
                 <p className="mt-1 text-sm text-gray-600">{s.d}</p>
               </li>
             ))}
           </ol>
           <div className="mt-10 text-center">
-            <a href="/contact#contact" className="inline-flex items-center justify-center rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-gray-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-yellow-300 hover:shadow-xl">
+            <a href="/contact#contact" className="inline-flex items-center justify-center bg-gray-900 px-8 py-4 text-lg font-medium text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl">
               まずは応募・相談する
             </a>
           </div>
@@ -195,10 +201,12 @@ export default function Recruit() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 text-center">よくあるご質問</h2>
-          <div className="w-24 h-1 bg-green-600 mx-auto mt-4 mb-10" />
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-light text-gray-900 mb-6">よくあるご質問</h2>
+            <div className="w-16 h-px bg-gray-300 mx-auto" />
+          </div>
 
           <div className="space-y-4">
             {[
@@ -207,12 +215,12 @@ export default function Recruit() {
               { q: '資格は必要ですか？', a: '調理スタッフは不問。栄養士・管理栄養士は資格保有者を想定していますが、補助業務からのスタートもご相談可能です。' },
               { q: '勤務地の希望は出せますか？', a: '通勤時間やご希望エリアを考慮して決定します。面談でご相談ください。' },
             ].map((item, i) => (
-              <details key={i} className="group rounded-xl border border-gray-200 bg-white p-5 open:shadow-sm">
+              <details key={i} className="group border border-gray-200 bg-white p-6 open:shadow-lg">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-2">
-                  <span className="text-base md:text-lg font-semibold text-gray-900">{item.q}</span>
+                  <span className="text-base md:text-lg font-medium text-gray-900">{item.q}</span>
                   <span className="text-gray-400 group-open:rotate-180 transition">⌄</span>
                 </summary>
-                <p className="mt-3 text-gray-600">{item.a}</p>
+                <p className="mt-4 text-gray-600 leading-relaxed">{item.a}</p>
               </details>
             ))}
           </div>
@@ -220,13 +228,14 @@ export default function Recruit() {
       </section>
 
       {/* 最終CTA */}
-      <section className="py-16 md:py-20 bg-green-700 text-white text-center">
+      <section className="py-16 md:py-20 bg-white border-t border-gray-200 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold">一緒に“安心とあたたかさ”を届けませんか？</h2>
-          <p className="mt-3 text-white/90">応募前のご相談もお気軽に。担当者が丁寧にご案内します。</p>
+          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">一緒に"安心とあたたかさ"を届けませんか？</h2>
+          <div className="w-20 h-px bg-gray-300 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 leading-relaxed">応募前のご相談もお気軽に。担当者が丁寧にご案内します。</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact#contact" className="rounded-xl bg-yellow-400 px-6 py-4 text-lg font-bold text-gray-900 shadow-lg transition hover:-translate-y-0.5 hover:bg-yellow-300 hover:shadow-xl">応募・相談する</a>
-            <a href="/contact" className="rounded-xl border border-white/80 bg-white/10 px-6 py-4 text-lg font-bold text-white backdrop-blur transition hover:bg-white hover:text-green-700">お問い合わせページへ</a>
+            <a href="/contact#contact" className="bg-gray-900 px-8 py-4 text-lg font-medium text-white shadow-lg transition hover:-translate-y-1 hover:shadow-xl">応募・相談する</a>
+            <a href="/contact" className="border border-gray-900 px-8 py-4 text-lg font-medium text-gray-900 transition hover:bg-gray-50">お問い合わせページへ</a>
           </div>
         </div>
       </section>

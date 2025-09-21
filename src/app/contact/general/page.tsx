@@ -39,9 +39,9 @@ export default function GeneralContact() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {/* 厨房委託業・飲食事業 */}
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-3xl border border-green-100/50 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-8 border border-green-100/50 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
@@ -71,7 +71,7 @@ export default function GeneralContact() {
               </ul>
               <a 
                 href="/contact/kitchen" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-xl font-medium hover:from-green-700 hover:to-teal-700 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white font-medium hover:from-green-700 hover:to-teal-700 transition-all duration-300"
               >
                 厨房委託業専用窓口へ
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,9 +81,9 @@ export default function GeneralContact() {
             </div>
 
             {/* デジタル事業 */}
-            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-3xl border border-indigo-100/50 hover:shadow-lg transition-all duration-300">
+            <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 border border-indigo-100/50 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-blue-600 flex items-center justify-center mr-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -113,7 +113,7 @@ export default function GeneralContact() {
               </ul>
               <a 
                 href="/contact/digital" 
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white rounded-xl font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-medium hover:from-indigo-700 hover:to-blue-700 transition-all duration-300"
               >
                 デジタル事業専用窓口へ
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ export default function GeneralContact() {
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100/50">
+            <div className="bg-white p-8 md:p-12 shadow-xl border border-gray-100/50">
               <form className="formrun space-y-6" action="https://form.run/api/v1/r/14wyo9q1lhd96ecsdndkl2l4" method="post">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
@@ -148,7 +148,7 @@ export default function GeneralContact() {
                     id="name"
                     name="お名前"
                     data-formrun-required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                     placeholder="山田 太郎"
                   />
                   <div data-formrun-show-if-error="お名前" className="text-red-500 text-sm mt-1">お名前を入力してください</div>
@@ -162,7 +162,7 @@ export default function GeneralContact() {
                     type="text"
                     id="company"
                     name="会社名・施設名・屋号"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                     placeholder="○○株式会社 / ○○介護施設"
                   />
                 </div>
@@ -178,7 +178,7 @@ export default function GeneralContact() {
                       name="メールアドレス"
                       data-formrun-type="email"
                       data-formrun-required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                       placeholder="example@email.com"
                     />
                     <div data-formrun-show-if-error="メールアドレス" className="text-red-500 text-sm mt-1">メールアドレスを正しく入力してください</div>
@@ -192,7 +192,7 @@ export default function GeneralContact() {
                       type="text"
                       id="phone"
                       name="お電話番号"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                       placeholder="03-1234-5678"
                     />
                   </div>
@@ -206,7 +206,7 @@ export default function GeneralContact() {
                     id="inquiry-type"
                     name="inquiry-type"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">選択してください</option>
                     <option value="kitchen-management">厨房委託業・飲食事業について</option>
@@ -227,7 +227,7 @@ export default function GeneralContact() {
                   <select
                     id="urgency"
                     name="urgency"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">選択してください</option>
                     <option value="urgent">緊急（当日中に回答希望）</option>
@@ -244,7 +244,7 @@ export default function GeneralContact() {
                   <select
                     id="how-found"
                     name="how-found"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="">選択してください</option>
                     <option value="google-search">Google検索</option>
@@ -265,7 +265,7 @@ export default function GeneralContact() {
                     name="お問い合わせ"
                     rows={6}
                     data-formrun-required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200"
                     placeholder="お問い合わせ内容を詳しくお聞かせください。&#10;&#10;例：&#10;・どのようなサービスをお求めですか？&#10;・現在抱えている課題について&#10;・ご予算や希望時期について&#10;・その他、ご質問やご要望など"
                   ></textarea>
                   <div data-formrun-show-if-error="お問い合わせ" className="text-red-500 text-sm mt-1">お問い合わせ内容を入力してください</div>
@@ -297,7 +297,7 @@ export default function GeneralContact() {
                   type="submit"
                   data-formrun-error-text="未入力の項目があります"
                   data-formrun-submitting-text="送信中..."
-                  className="w-full bg-gradient-to-r from-slate-600 to-gray-600 text-white py-4 px-6 rounded-xl font-medium text-lg hover:from-slate-700 hover:to-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-slate-600 to-gray-600 text-white py-4 px-6 font-medium text-lg hover:from-slate-700 hover:to-gray-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
                 >
                   お問い合わせを送信する
                 </button>
@@ -317,8 +317,8 @@ export default function GeneralContact() {
           <h3 className="text-3xl md:text-4xl font-light mb-12">その他の連絡方法</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -328,8 +328,8 @@ export default function GeneralContact() {
               <p className="text-slate-200 text-sm">平日 9:00〜18:00</p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -339,8 +339,8 @@ export default function GeneralContact() {
               <p className="text-slate-200 text-sm">24時間受付</p>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="bg-white/10 backdrop-blur-sm p-8 border border-white/20">
+              <div className="w-16 h-16 bg-white/20 flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -348,7 +348,7 @@ export default function GeneralContact() {
               </div>
               <h4 className="text-xl font-light mb-4">所在地</h4>
               <p className="text-lg mb-2">〒840-0023<br />佐賀県佐賀市本庄町大字袋123番地8</p>
-              <p className="text-slate-200 text-sm">※訪問は事前予約制</p>
+             
             </div>
           </div>
         </div>

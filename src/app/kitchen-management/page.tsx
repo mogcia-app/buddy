@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../../components/Header";
@@ -8,8 +8,6 @@ import Footer from "../../components/Footer";
 import ContactSection from "../../components/ContactSection";
 
 export default function KitchenManagement() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
   const dishes = [
     {
       src: "/1.jpg",
@@ -48,17 +46,6 @@ export default function KitchenManagement() {
       tags: ["手作りデザート", "イベント対応", "個別対応"]
     }
   ];
-
-  const cardsPerView = 3;
-  const maxSlide = Math.max(0, dishes.length - cardsPerView);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => Math.min(prev + 1, maxSlide));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => Math.max(prev - 1, 0));
-  };
 
   return (
     <div className="min-h-screen">
@@ -131,9 +118,9 @@ export default function KitchenManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* 厨房運営管理 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -161,7 +148,7 @@ export default function KitchenManagement() {
             </div>
 
             {/* 栄養管理 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -189,7 +176,7 @@ export default function KitchenManagement() {
             </div>
 
             {/* 衛生管理 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -233,91 +220,42 @@ export default function KitchenManagement() {
             </p>
           </div>
 
-          {/* 料理写真カードスライダー */}
-          <div className="relative">
-            {/* 左矢印 */}
-            {currentSlide > 0 && (
-              <button 
-                onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 hover:scale-110 shadow-lg"
-              >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            )}
-            
-            {/* 右矢印 */}
-            {currentSlide < maxSlide && (
-              <button 
-                onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all duration-300 hover:scale-110 shadow-lg"
-              >
-              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            )}
-            
-            {/* カードコンテナ */}
-            <div className="overflow-hidden mx-12">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * (100 / cardsPerView)}%)` }}
-              >
-                {dishes.map((dish, index) => (
-                  <div key={index} className="w-1/3 flex-shrink-0 px-4">
-                    <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
-                      <div className="relative">
-                        <Image
-                          src={dish.src}
-                          alt={dish.alt}
-                          width={600}
-                          height={400}
-                          className="w-full h-80 mb-6 object-cover"
-                        />
-                        
-                        {/* 装飾要素 */}
-                        <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-400/15 to-red-500/15 rounded-full blur-xl"></div>
-                      </div>
-                      
-                      <div className="text-center">
-                        <h4 className="text-xl font-medium text-gray-900 mb-3">{dish.title}</h4>
-                        <p className="text-gray-600 leading-relaxed mb-4">
-                          {dish.description}
-                        </p>
-                        <div className="flex flex-wrap gap-2 justify-center">
-                          {dish.tags.map((tag, tagIndex) => (
-                            <span key={tagIndex} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+          {/* 料理写真カード */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {dishes.map((dish, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+                <div className="relative">
+                  <Image
+                    src={dish.src}
+                    alt={dish.alt}
+                    width={600}
+                    height={400}
+                    className="w-full h-80 mb-6 object-cover rounded-2xl"
+                  />
+                  
+                  {/* 装飾要素 */}
+                  <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-400/15 to-red-500/15 rounded-full blur-xl"></div>
+                </div>
+                
+                <div className="text-center">
+                  <h4 className="text-xl font-medium text-gray-900 mb-3">{dish.title}</h4>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {dish.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {dish.tags.map((tag, tagIndex) => (
+                      <span key={tagIndex} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-            
-            {/* ドット インジケーター */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {Array.from({ length: maxSlide + 1 }, (_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide 
-                      ? 'bg-orange-600 scale-125' 
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
-            </div>
+            ))}
           </div>
 
           {/* 料理の特徴 */}
-          <div className="mt-20 grid md:grid-cols-3 gap-8">
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-6 bg-gradient-to-br from-slate-50 to-gray-50/30 rounded-2xl border border-gray-100/50">
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -371,7 +309,7 @@ export default function KitchenManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="bg-gradient-to-br from-slate-50 to-gray-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -521,7 +459,7 @@ export default function KitchenManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <div className="text-center group">
               <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -659,7 +597,7 @@ export default function KitchenManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* 老人ホーム側（施設運営者）の声 */}
             <div className="bg-gradient-to-br from-slate-50 to-indigo-50/30 p-8 rounded-3xl border border-gray-100/50">
               <div className="flex items-center mb-6">

@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -165,8 +167,8 @@ export default function Restaurant() {
         </div>
       </section>
 
-      {/* 私たちの強み */}
-      <section className="py-32 bg-white">
+        {/* 私たちの強み */}
+        <section className="py-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
@@ -236,8 +238,8 @@ export default function Restaurant() {
                 
                 <div className="space-y-6">
                   <div className="text-center p-6 bg-white/60 rounded-2xl border border-white/50">
-                    <div className="text-3xl font-light text-emerald-700 mb-2">500+</div>
-                    <div className="text-sm text-gray-600">イベント実績</div>
+                    <div className="text-2xl font-light text-emerald-700 mb-2">多数の実績</div>
+                    <div className="text-sm text-gray-600">イベント対応</div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
@@ -467,6 +469,521 @@ export default function Restaurant() {
           </div>
         </div>
       </section>
+
+      {/* 実際の提供料理 */}
+      <section className="py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <div className="text-center mb-20">
+            <div className="inline-block mb-4">
+              <span className="text-sm font-medium text-emerald-700 tracking-wider uppercase">Our Dishes</span>
+            </div>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">実際の提供料理</h3>
+            <div className="w-16 h-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent mx-auto mb-8"></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              実際にご提供している料理の一例をご紹介します。お客様のご要望に合わせてカスタマイズも可能です。
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 抹茶フレンチトースト */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/3.jpg"
+                  alt="抹茶フレンチトースト"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-400/15 to-teal-500/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">抹茶のフレンチトースト</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  京都産の上質な抹茶を使用した、和の香りが楽しめる特別なフレンチトースト。
+                  ふわふわの食感と抹茶の深い味わいが絶妙にマッチした、贅沢な一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">抹茶</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">京都産</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">和スイーツ</span>
+                </div>
+              </div>
+            </div>
+
+            {/* チョコバナナ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/4.jpg"
+                  alt="チョコバナナ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-400/15 to-teal-500/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">チョコバナナのフレンチトースト</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  甘いバナナと濃厚なチョコレートソースが絶妙にマッチした人気のフレンチトースト。
+                  ふわふわの食感と甘い香りで、子供から大人まで愛される特別なデザートです。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">チョコレート</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">バナナ</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">人気デザート</span>
+                </div>
+              </div>
+            </div>
+
+              {/* フルーツフレンチトースト */}
+              <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/8.jpg"
+                  alt="フルーツフレンチトースト"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">フルーツフレンチトースト</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  季節のフレッシュフルーツをたっぷりのせた、贅沢なフレンチトースト。
+                  ふわふわの食感と自然な甘みが絶妙にマッチした、見た目も華やかなスイーツです。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">フルーツ</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">季節限定</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">華やか</span>
+                </div>
+              </div>
+            </div>
+
+            {/* ナッツのフレンチトースト */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/9.jpg"
+                  alt="ナッツのフレンチトースト"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">ナッツのフレンチトースト</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  香ばしいナッツをたっぷりトッピングした、食感豊かなフレンチトースト。
+                  カリッとした食感とナッツの風味が楽しめる、栄養価の高いスイーツです。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">ナッツ</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">香ばしい</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">食感豊か</span>
+                </div>
+              </div>
+            </div>
+
+            {/* チーズ照り焼きチキンと日替わりクラフトビール */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/5.jpg"
+                  alt="チーズ照り焼きチキンと日替わりクラフトビール"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">チーズ照り焼きチキンと日替わりクラフトビール</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  特製照り焼きソースで焼き上げたジューシーなチキンに、とろけるチーズをトッピング。
+                  毎日変わる厳選クラフトビールとの相性は抜群で、贅沢なひとときをお楽しみいただけます。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">照り焼き</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">クラフトビール</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">日替わり</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 地元イベント出店の様子 */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/6.jpg"
+                  alt="地元イベント出店の様子"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">地元イベント出店の様子</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  地域のお祭りやイベントでの出店活動の様子です。
+                  地元の皆様との交流を大切にし、温かい雰囲気の中で美味しい料理をお届けしています。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">地域密着</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">イベント出店</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">地域交流</span>
+                </div>
+              </div>
+            </div>
+
+            {/* サラダとスープのランチ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/7.jpg"
+                  alt="サラダとスープのランチ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">サラダとスープのランチ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  新鮮なサラダと心温まるスープを組み合わせたヘルシーなランチセット。
+                  体に優しく、栄養バランスを考えた軽やかでありながら満足感のある一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">ランチセット</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">ヘルシー</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">体に優しい</span>
+                </div>
+              </div>
+            </div>
+
+          
+
+            {/* チュリトス */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/10.jpg"
+                  alt="チュリトス"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">チュリトス</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  外はカリッと、中はふんわりとした食感が楽しめるスペイン発祥の人気スイーツ。
+                  シナモンシュガーをたっぷりまぶした、温かくて甘い至福のデザートです。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">スペイン風</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">シナモン</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">温かいデザート</span>
+                </div>
+              </div>
+            </div>
+
+            {/* サムライサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/11.jpg"
+                  alt="サムライサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">サムライサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  ボリューム満点の肉料理がメインのパワフルサラダ。
+                  新鮮野菜と旨味たっぷりの肉類で、満足感のある一皿です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">ボリューム満点</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">肉料理</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">パワフル</span>
+                </div>
+              </div>
+            </div>
+
+            {/* シーザーサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/12.jpg"
+                  alt="シーザーサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">シーザーサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  クリーミーなドレッシングと新鮮野菜の定番サラダ。
+                  パルメザンチーズとクルトンで、贅沢な味わいをお楽しみください。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">クラシック</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">チーズ</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">クリーミー</span>
+                </div>
+              </div>
+            </div>
+
+            {/* ブッダサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/13.jpg"
+                  alt="ブッダサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-700/15 to-teal-800/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">ブッダサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  色とりどりの野菜と豆類がたっぷり入ったヘルシーサラダ。
+                  栄養バランスを考えた、体に優しい一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">ヘルシー</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">豆類</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">栄養満点</span>
+                </div>
+              </div>
+            </div>
+
+            {/* コリアンパルガット */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/14.jpg"
+                  alt="コリアンパルガット"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">コリアンパルガット</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  韓国風の海鮮とキムチがメインのスパイシーサラダ。
+                  エビと海苔、新鮮野菜で本格的な韓国の味をお楽しみください。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">韓国風</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">海鮮</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">スパイシー</span>
+                </div>
+              </div>
+            </div>
+
+            {/* ブッダサブサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/15.jpg"
+                  alt="ブッダサブサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">ブッダサブサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  柔らかな牛肉と新鮮野菜の絶妙なバランス。
+                  もやしと彩り豊かな野菜で、食べ応えのある一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">牛肉</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">食べ応え</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">バランス</span>
+                </div>
+              </div>
+            </div>
+
+            {/* スパイシーメキシカンサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/16.jpg"
+                  alt="スパイシーメキシカンサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-700/15 to-teal-800/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">スパイシーメキシカンサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  ソーセージとゆで卵、アボカドが入ったメキシカンスタイル。
+                  スパイシーな味付けで、エキゾチックな味わいをお楽しみください。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">メキシカン</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">アボカド</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">スパイシー</span>
+                </div>
+              </div>
+            </div>
+
+            {/* チキン&ビーンズサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/17.jpg"
+                  alt="チキン&ビーンズサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-500/15 to-teal-600/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">チキン&ビーンズサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  グリルチキンと豆類がメインのプロテインたっぷりサラダ。
+                  健康的で満足感のある、栄養バランス抜群の一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">チキン</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">プロテイン</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">健康的</span>
+                </div>
+              </div>
+            </div>
+
+            {/* シチリアンサラダ */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/18.jpg"
+                  alt="シチリアンサラダ"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-r from-emerald-600/15 to-teal-700/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">シチリアンサラダ</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  きのこと新鮮野菜、ゆで卵のイタリアンスタイルサラダ。
+                  シチリア風の味付けで、地中海の風味をお楽しみください。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">イタリアン</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">きのこ</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">地中海風</span>
+                </div>
+              </div>
+            </div>
+
+            {/* スペシャルサラダボウル */}
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 border border-gray-100/50 hover:shadow-xl transition-all duration-300 group">
+              <div className="relative">
+                <Image
+                  src="/19.jpg"
+                  alt="スペシャルサラダボウル"
+                  width={600}
+                  height={400}
+                  className="w-full h-80 mb-6 object-cover"
+                />
+                
+                {/* 装飾要素 */}
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-emerald-700/15 to-teal-800/15 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="text-center">
+                <h4 className="text-xl font-medium text-gray-900 mb-3">スペシャルサラダボウル</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  シェフ特製のスペシャルサラダボウル。
+                  厳選された食材を使用した、当店自慢の特別な一品です。
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">シェフ特製</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">特別</span>
+                  <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-xs font-medium">厳選食材</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
 
       {/* お客様の声 */}
       <section className="py-32 bg-gradient-to-b from-white to-slate-50">

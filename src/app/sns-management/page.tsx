@@ -41,7 +41,7 @@ export default function SNSManagement() {
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-8"></div>
           
           <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-            Instagram、Facebook、TwitterなどのSNSアカウントの運用代行。<br className="hidden md:block" />
+            Instagram、TikTok、YouTube、TwitterなどのSNSアカウントの運用代行。<br className="hidden md:block" />
             コンテンツ制作から分析まで一貫してサポートします。
           </p>
 
@@ -76,7 +76,7 @@ export default function SNSManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Instagram */}
             <div className="text-center group">
               <div className="bg-gradient-to-br from-slate-50 to-purple-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
@@ -92,17 +92,17 @@ export default function SNSManagement() {
               </div>
             </div>
 
-            {/* Facebook */}
+            {/* TikTok */}
             <div className="text-center group">
               <div className="bg-gradient-to-br from-slate-50 to-purple-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
                   </svg>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">Facebook</h4>
+                <h4 className="text-lg font-medium text-gray-900 mb-3">TikTok</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  幅広い年齢層にリーチし、コミュニティとの深いつながりを構築
+                  若い世代に人気の短動画プラットフォームで、バイラル効果を狙った投稿
                 </p>
               </div>
             </div>
@@ -122,17 +122,17 @@ export default function SNSManagement() {
               </div>
             </div>
 
-            {/* LinkedIn */}
+            {/* YouTube */}
             <div className="text-center group">
               <div className="bg-gradient-to-br from-slate-50 to-purple-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-800 to-pink-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">LinkedIn</h4>
+                <h4 className="text-lg font-medium text-gray-900 mb-3">YouTube</h4>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  ビジネス向けコンテンツで、企業の専門性と信頼性をアピール
+                  動画コンテンツで深い情報発信と、長期的なファン獲得を実現
                 </p>
               </div>
             </div>
@@ -154,9 +154,9 @@ export default function SNSManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* コンテンツ制作 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
@@ -184,7 +184,7 @@ export default function SNSManagement() {
             </div>
 
             {/* 戦略・企画 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -212,7 +212,7 @@ export default function SNSManagement() {
             </div>
 
             {/* 分析・改善 */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-700 to-pink-700 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -242,17 +242,17 @@ export default function SNSManagement() {
         </div>
       </section>
 
-      {/* 運用実績・効果 */}
+      {/* SNS運用代行の必要性 */}
       <section className="py-32 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-purple-700 tracking-wider uppercase">Results & Performance</span>
+              <span className="text-sm font-medium text-purple-700 tracking-wider uppercase">Why SNS Management</span>
             </div>
-            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">運用実績・効果</h3>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">SNS運用代行の必要性</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              データに基づいた戦略的な運用で、確実な成果をお届けします
+              忙しい経営者様に代わって、効果的なSNS運用をお手伝いします
             </p>
           </div>
 
@@ -261,14 +261,14 @@ export default function SNSManagement() {
               <div className="flex items-start space-x-4 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium text-gray-900 mb-2">フォロワー増加率</h4>
+                  <h4 className="text-xl font-medium text-gray-900 mb-2">時間の節約</h4>
                   <p className="text-gray-600">
-                    平均月間フォロワー増加率15%を実現。
-                    質の高いフォロワーを着実に獲得します。
+                    毎日の投稿やコメント対応など、時間のかかるSNS運用を代行。
+                    本業に集中していただけます。
                   </p>
                 </div>
               </div>
@@ -276,14 +276,14 @@ export default function SNSManagement() {
               <div className="flex items-start space-x-4 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium text-gray-900 mb-2">エンゲージメント向上</h4>
+                  <h4 className="text-xl font-medium text-gray-900 mb-2">専門知識の活用</h4>
                   <p className="text-gray-600">
-                    いいね、コメント、シェア数の大幅向上。
-                    ブランドとの深いつながりを構築します。
+                    各プラットフォームの特性を理解した専門的な運用で、
+                    効果的な結果を実現します。
                   </p>
                 </div>
               </div>
@@ -291,14 +291,14 @@ export default function SNSManagement() {
               <div className="flex items-start space-x-4 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-700 to-pink-700 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-xl font-medium text-gray-900 mb-2">売上・認知度向上</h4>
+                  <h4 className="text-xl font-medium text-gray-900 mb-2">継続的な成長</h4>
                   <p className="text-gray-600">
-                    SNSからの流入増加により、
-                    売上向上とブランド認知度拡大を実現します。
+                    一貫したブランディングと戦略的な投稿で、
+                    長期的なフォロワー獲得と売上向上を目指します。
                   </p>
                 </div>
               </div>
@@ -307,24 +307,24 @@ export default function SNSManagement() {
             <div className="relative">
               <div className="bg-gradient-to-br from-slate-50 to-purple-50/50 p-8 md:p-12 rounded-3xl border border-gray-100/50 backdrop-blur-sm">
                 <div className="text-center mb-8">
-                  <h5 className="text-xl font-light text-gray-900 mb-2">運用実績</h5>
+                  <h5 className="text-xl font-light text-gray-900 mb-2">こんなお悩みありませんか？</h5>
                   <div className="w-12 h-px bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="text-center p-6 bg-white/60 rounded-2xl border border-white/50">
-                    <div className="text-3xl font-light text-purple-700 mb-2">50+</div>
-                    <div className="text-sm text-gray-600">運用アカウント</div>
+                    <div className="text-lg font-light text-gray-900 mb-2">投稿が続かない</div>
+                    <div className="text-sm text-gray-600">忙しくて更新できない</div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-white/60 rounded-2xl border border-white/50">
-                      <div className="text-2xl font-light text-gray-900 mb-1">15%</div>
-                      <div className="text-xs text-gray-600">月間成長率</div>
+                      <div className="text-lg font-light text-gray-900 mb-1">何を投稿すれば</div>
+                      <div className="text-xs text-gray-600">コンテンツに悩む</div>
                     </div>
                     <div className="text-center p-4 bg-white/60 rounded-2xl border border-white/50">
-                      <div className="text-2xl font-light text-gray-900 mb-1">24/7</div>
-                      <div className="text-xs text-gray-600">監視体制</div>
+                      <div className="text-lg font-light text-gray-900 mb-1">効果が見えない</div>
+                      <div className="text-xs text-gray-600">成果が分からない</div>
                     </div>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function SNSManagement() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             <div className="text-center group">
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -408,76 +408,197 @@ export default function SNSManagement() {
         </div>
       </section>
 
-      {/* お客様の声 */}
+      {/* SNS運用の重要性 */}
       <section className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-purple-700 tracking-wider uppercase">Customer Voice</span>
+              <span className="text-sm font-medium text-purple-700 tracking-wider uppercase">Importance</span>
             </div>
-            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">お客様の声</h3>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">SNS運用の重要性</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              実際にSNS運用代行をご利用いただいているお客様からの声をご紹介します
+              現代のビジネスにおいて、SNSは欠かせないマーケティングツールです
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* 美容サロン */}
-            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-8 rounded-3xl border border-gray-100/50">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* 顧客との接点拡大 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 919.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900">美容サロン Bella</h4>
-                  <p className="text-sm text-gray-600">Instagram・Facebook運用</p>
+                  <h4 className="font-medium text-gray-900">顧客との接点拡大</h4>
+                  <p className="text-sm text-gray-600">24時間365日の情報発信</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                「SNS運用をお任せしてから、新規のお客様が大幅に増加しました。
-                投稿内容もとてもおしゃれで、サロンの雰囲気が伝わると評判です。
-                フォロワー数も3ヶ月で2倍になり、予約も順調に入るようになりました。
-                プロにお任せして本当に良かったです。」
+                SNSを活用することで、従来の営業時間を超えて、24時間いつでもお客様との接点を持つことができます。
+                特に若い世代へのアプローチには必須のツールとなっており、
+                新規顧客獲得の重要なチャネルとして機能します。
               </p>
-              <div className="flex text-yellow-400 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">新規顧客獲得</span>
               </div>
-              <p className="text-sm text-purple-700 font-medium">美容・サロン業界</p>
             </div>
 
-            {/* 地域密着型企業 */}
-            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-8 rounded-3xl border border-gray-100/50">
+            {/* ブランド認知度向上 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900">株式会社地域商店</h4>
-                  <p className="text-sm text-gray-600">Instagram・Twitter運用</p>
+                  <h4 className="font-medium text-gray-900">ブランド認知度向上</h4>
+                  <p className="text-sm text-gray-600">口コミ・拡散効果</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                「地域のお客様とのつながりを深めたくてSNS運用をお願いしました。
-                地域に根ざしたコンテンツを作ってくださり、地元の方々からの反応が格段に良くなりました。
-                イベント告知の効果も高く、来店客数が20%増加しています。」
+                SNSの拡散力を活用することで、従来の広告では難しい自然な口コミを生み出すことができます。
+                ユーザー同士のシェアやコメントにより、ブランドの認知度が飛躍的に向上し、
+                信頼性の高いマーケティング効果を得ることができます。
               </p>
-              <div className="flex text-yellow-400 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">口コミ効果</span>
               </div>
-              <p className="text-sm text-purple-700 font-medium">地域密着型企業</p>
+            </div>
+
+            {/* コスト効率の良いマーケティング */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-700 to-pink-700 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">コスト効率</h4>
+                  <p className="text-sm text-gray-600">低コスト高効果</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                従来の広告と比較して、SNSマーケティングは低コストで高い効果を期待できます。
+                特にターゲティング精度が高く、無駄のない集客が可能です。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">低コスト</span>
+              </div>
+            </div>
+
+            {/* リアルタイムコミュニケーション */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-800 to-pink-800 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">双方向コミュニケーション</h4>
+                  <p className="text-sm text-gray-600">リアルタイム交流</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                お客様との直接的な対話を通じて、リアルな声を聞き、
+                サービス改善や商品開発に活かすことができます。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">顧客の声</span>
+              </div>
+            </div>
+
+            {/* データ分析・改善 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-900 to-pink-900 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">データ分析・改善</h4>
+                  <p className="text-sm text-gray-600">効果測定可能</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                SNSプラットフォームの詳細な分析データにより、
+                投稿の効果を数値で確認し、継続的な改善が可能です。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">効果測定</span>
+              </div>
+            </div>
+
+            {/* 競合他社との差別化 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">競合他社との差別化</h4>
+                  <p className="text-sm text-gray-600">独自性の表現</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                競合他社がSNSを活用している中、取り組まないことは機会損失。
+                独自の魅力を発信して差別化を図ることが重要です。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">差別化</span>
+              </div>
+            </div>
+
+            {/* SEO効果 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">検索エンジン効果</h4>
+                  <p className="text-sm text-gray-600">SEO向上</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                SNSからの外部リンクやブランド名の言及により、
+                検索エンジンでの順位向上にも効果があります。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">SEO効果</span>
+              </div>
+            </div>
+
+            {/* 顧客ロイヤリティ向上 */}
+            <div className="bg-gradient-to-br from-slate-50 to-purple-50/30 p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-700 to-purple-700 rounded-lg flex items-center justify-center mr-4">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-medium text-gray-900">顧客ロイヤリティ向上</h4>
+                  <p className="text-sm text-gray-600">継続的な関係構築</p>
+                </div>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                定期的な情報発信と交流により、お客様との長期的な関係を構築。
+                リピート率向上と顧客生涯価値の最大化を実現します。
+              </p>
+              <div className="flex justify-center">
+                <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded text-xs font-medium">リピート率向上</span>
+              </div>
             </div>
           </div>
         </div>
@@ -505,27 +626,195 @@ export default function SNSManagement() {
           
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-12"></div>
           
-          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-16">
-            現代のマーケティングにおいて、SNSは欠かせないツールとなっています。<br className="hidden md:block" />
-            お客様との直接的なコミュニケーションを通じて、ブランドの価値を伝え、<br className="hidden md:block" />
-            長期的な関係性を築くことができます。
+          <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
+            デジタル化が急速に進む現代において、SNSマーケティングは単なる「あったら良い」ツールから、<br className="hidden md:block" />
+            ビジネス成功に「欠かせない」戦略的ツールへと変化しています。<br className="hidden md:block" />
+            特にコロナ禍以降、消費者行動が大きく変化し、オンラインでの情報収集と購買が主流となりました。
           </p>
+
+          {/* 時代背景の説明 */}
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h3 className="text-2xl md:text-3xl font-light text-gray-900">消費者行動の変化</h3>
+                <div className="space-y-4 text-gray-600">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>情報収集の変化:</strong> 商品購入前に、80%以上の消費者がSNSで情報収集を行う時代
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>信頼性の重視:</strong> 企業の公式情報よりも、実際のユーザーの投稿や口コミを重視
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>体験重視:</strong> 商品・サービスの「体験」や「ストーリー」を求める傾向が強化
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-6">
+                <h3 className="text-2xl md:text-3xl font-light text-gray-900">ビジネス環境の変化</h3>
+                <div className="space-y-4 text-gray-600">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-pink-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>競争の激化:</strong> 同業他社がSNSマーケティングに力を入れる中、取り組まないリスク
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-pink-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>広告費の高騰:</strong> 従来の広告手法のコストが上昇し、SNSの費用対効果が相対的に向上
+                    </p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-pink-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-sm leading-relaxed">
+                      <strong>地域ビジネスの機会:</strong> 地域密着型企業こそ、SNSでの親近感ある発信が効果的
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
+          {/* 統計データと具体的な理由 */}
+          <div className="space-y-16">
           {/* 統計データ */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50">
-              <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">80%</div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 text-center mb-12">数字で見るSNSマーケティングの影響力</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">85%</div>
               <div className="text-sm text-gray-600">の消費者がSNSで商品を発見</div>
             </div>
             
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50">
-              <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">3倍</div>
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">5倍</div>
               <div className="text-sm text-gray-600">従来広告よりも高いエンゲージメント</div>
             </div>
             
-            <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50">
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">70%</div>
+                  <div className="text-sm text-gray-600">がSNSで企業をフォロー</div>
+                </div>
+
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">3.2時間</div>
+                  <div className="text-sm text-gray-600">日本人の平均SNS利用時間</div>
+                </div>
+
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">60%</div>
+                  <div className="text-sm text-gray-600">がSNS経由で購入経験あり</div>
+                </div>
+
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">-40%</div>
+                  <div className="text-sm text-gray-600">従来広告の効果低下率</div>
+                </div>
+
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
+                  <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">90%</div>
+                  <div className="text-sm text-gray-600">の企業がSNS活用を検討</div>
+                </div>
+
+                <div className="text-center p-6 bg-white/60 backdrop-blur-sm rounded-lg border border-gray-100/50">
               <div className="text-3xl md:text-4xl font-light text-purple-700 mb-2">24/7</div>
               <div className="text-sm text-gray-600">いつでもお客様とつながれる</div>
+                </div>
+              </div>
+            </div>
+
+            {/* 具体的な理由 */}
+            <div>
+              <h3 className="text-2xl md:text-3xl font-light text-gray-900 text-center mb-12">今すぐ始めるべき理由</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">機会損失のリスク</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    競合他社がSNSで顧客を獲得している間、取り組まないことは大きな機会損失。
+                    後から追いつくのは困難です。
+                  </p>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">早期参入の優位性</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    まだSNSに本格参入していない業界では、早期に始めることで
+                    圧倒的な先行者利益を得られます。
+                  </p>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">低予算でも効果大</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    大企業と同じ土俵で戦える数少ないマーケティング手法。
+                    創意工夫次第で大きな成果を得られます。
+                  </p>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 715.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 919.288 0M15 7a3 3 0 11-6 0 3 3 0 616 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">世代を超えた影響力</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    若者だけでなく、中高年層のSNS利用も急増。
+                    全世代にアプローチできる媒体となりました。
+                  </p>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">測定可能な効果</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    従来の広告と違い、詳細なデータ分析により
+                    投資対効果を明確に把握できます。
+                  </p>
+                </div>
+
+                <div className="bg-white/70 backdrop-blur-sm p-6 rounded-lg border border-gray-100/50 hover:shadow-lg transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h4 className="text-lg font-medium text-gray-900 mb-3">即座に開始可能</h4>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    大規模な設備投資は不要。アカウント開設から
+                    すぐにマーケティング活動を開始できます。
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -533,7 +822,7 @@ export default function SNSManagement() {
 
       <ContactSection 
         title="SNS運用についてお気軽にご相談ください"
-        description="Instagram、Facebook、TwitterなどのSNS運用でお困りのことがございましたら、専門スタッフが丁寧にご相談をお受けいたします。現状分析・戦略提案は無料です。"
+        description="Instagram、TikTok、YouTube、TwitterなどのSNS運用でお困りのことがございましたら、専門スタッフが丁寧にご相談をお受けいたします。現状分析・戦略提案は無料です。"
         ctaText="SNS運用のお問い合わせ"
         ctaHref="/contact/general"
       />

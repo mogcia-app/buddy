@@ -72,13 +72,13 @@ export default function WebDevelopment() {
             <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">サービス内容</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              最新技術とデザインで、お客様のビジネスを成功に導くWebサイトを制作します
+              お客様のご要望に合わせて、使いやすく美しいWebサイトを制作いたします
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* コーポレートサイト */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -106,7 +106,7 @@ export default function WebDevelopment() {
             </div>
 
             {/* ECサイト */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -134,7 +134,7 @@ export default function WebDevelopment() {
             </div>
 
             {/* ランディングページ */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-100/50 hover:bg-white/90 transition-all duration-300 hover:-translate-y-1">
+            <div className="bg-gradient-to-br from-slate-50 to-gray-50/30 p-6 md:p-8 rounded-3xl border border-gray-100/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-2xl flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -164,95 +164,98 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      {/* 制作実績・技術スタック */}
+      {/* 私たちの取り組み */}
       <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-blue-700 tracking-wider uppercase">Technology Stack</span>
+              <span className="text-sm font-medium text-blue-700 tracking-wider uppercase">Our Approach</span>
             </div>
-            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">技術スタック・制作実績</h3>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">私たちの取り組み</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              最新の技術を駆使して、パフォーマンスとユーザビリティを両立したWebサイトを制作します
+              お客様のビジネスを理解し、目的に合った最適なWebサイトをお作りします
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            {/* 左側：技術スタック */}
+            {/* 左側：私たちの想い */}
             <div className="space-y-8">
               <div>
-                <h4 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">使用技術</h4>
+                <h4 className="text-2xl md:text-3xl font-light text-gray-900 mb-6">Web制作への想い</h4>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  最新のフレームワークと技術を活用し、高速で安全、そして美しいWebサイトを制作します。
+                  多角事業を展開する中で培った「お客様の立場に立つ」姿勢を、Web制作にも活かしています。
+                  技術だけでなく、ビジネスの成功を第一に考えたサイト作りを心がけています。
                 </p>
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-slate-50 to-blue-50/30 rounded-2xl border border-gray-100/50">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">React</span>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-sm">React.js</div>
-                    <div className="text-xs text-gray-600">フロントエンド</div>
+                    <h5 className="text-lg font-medium text-gray-900 mb-2">お客様目線での設計</h5>
+                    <p className="text-gray-600 text-sm">
+                      飲食店や厨房管理の現場経験を活かし、実際に使いやすいサイトを設計します。
+                    </p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-slate-50 to-blue-50/30 rounded-2xl border border-gray-100/50">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">Next</span>
+
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-sm">Next.js</div>
-                    <div className="text-xs text-gray-600">フルスタック</div>
+                    <h5 className="text-lg font-medium text-gray-900 mb-2">継続的なサポート</h5>
+                    <p className="text-gray-600 text-sm">
+                      制作後も継続的にサポート。更新や改善のご相談もお気軽にどうぞ。
+                    </p>
                   </div>
                 </div>
-                
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-slate-50 to-blue-50/30 rounded-2xl border border-gray-100/50">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">TS</span>
+
+                <div className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900 text-sm">TypeScript</div>
-                    <div className="text-xs text-gray-600">型安全性</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-3 p-4 bg-gradient-to-r from-slate-50 to-blue-50/30 rounded-2xl border border-gray-100/50">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-800 to-indigo-800 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">TW</span>
-                  </div>
-                  <div>
-                    <div className="font-medium text-gray-900 text-sm">Tailwind CSS</div>
-                    <div className="text-xs text-gray-600">スタイリング</div>
+                    <h5 className="text-lg font-medium text-gray-900 mb-2">ビジネス成果重視</h5>
+                    <p className="text-gray-600 text-sm">
+                      見た目だけでなく、集客や売上向上につながるサイト作りを目指します。
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* 右側：制作実績 */}
+            {/* 右側：私たちの約束 */}
             <div className="relative">
               <div className="bg-gradient-to-br from-slate-50 to-blue-50/50 p-8 md:p-12 rounded-3xl border border-gray-100/50 backdrop-blur-sm">
                 <div className="text-center mb-8">
-                  <h5 className="text-xl font-light text-gray-900 mb-2">制作実績</h5>
+                  <h5 className="text-xl font-light text-gray-900 mb-2">私たちの約束</h5>
                   <div className="w-12 h-px bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto"></div>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="text-center p-6 bg-white/60 rounded-2xl border border-white/50">
-                    <div className="text-3xl font-light text-blue-700 mb-2">200+</div>
-                    <div className="text-sm text-gray-600">制作実績</div>
+                    <div className="text-2xl font-light text-blue-700 mb-2">丁寧なヒアリング</div>
+                    <div className="text-sm text-gray-600">お客様のご要望を詳しくお聞きします</div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
                     <div className="text-center p-4 bg-white/60 rounded-2xl border border-white/50">
-                      <div className="text-2xl font-light text-gray-900 mb-1">95%</div>
-                      <div className="text-xs text-gray-600">満足度</div>
+                      <div className="text-xl font-light text-gray-900 mb-1">安心価格</div>
+                      <div className="text-xs text-gray-600">明確な料金体系</div>
                     </div>
                     <div className="text-center p-4 bg-white/60 rounded-2xl border border-white/50">
-                      <div className="text-2xl font-light text-gray-900 mb-1">30日</div>
-                      <div className="text-xs text-gray-600">平均制作期間</div>
+                      <div className="text-xl font-light text-gray-900 mb-1">迅速対応</div>
+                      <div className="text-xs text-gray-600">スピーディな制作</div>
                     </div>
                   </div>
                 </div>
@@ -280,7 +283,7 @@ export default function WebDevelopment() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -337,7 +340,7 @@ export default function WebDevelopment() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             <div className="text-center group">
               <div className="relative mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
@@ -409,34 +412,34 @@ export default function WebDevelopment() {
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-20">
             <div className="inline-block mb-4">
-              <span className="text-sm font-medium text-blue-700 tracking-wider uppercase">Customer Voice</span>
+              <span className="text-sm font-medium text-blue-700 tracking-wider uppercase">Benefits</span>
             </div>
-            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">お客様の声</h3>
+            <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">Web制作のメリット</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              実際にWeb制作をご依頼いただいたお客様からの声をご紹介します
+              Webサイトを持つことで得られる具体的なメリットをご紹介します
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* コーポレートサイト制作 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Web制作のメリット */}
             <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 p-8 rounded-3xl border border-gray-100/50">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900">株式会社XYZ</h4>
-                  <p className="text-sm text-gray-600">コーポレートサイト制作</p>
+                  <h4 className="font-medium text-gray-900">信頼性の向上</h4>
+                  <p className="text-sm text-gray-600">プロフェッショナルなWebサイト</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                「モダンで美しいWebサイトを制作していただき、お問い合わせが3倍に増加しました。
-                レスポンシブデザインで、スマートフォンからのアクセスも大幅に改善。
-                SEO対策もしっかりしていただき、検索順位も上位に表示されるようになりました。
-                技術力の高さを実感しています。」
+                「しっかりとしたWebサイトがあることで、お客様からの信頼度が大きく向上しました。
+                24時間いつでも情報を提供できるようになり、営業効率も格段にアップ。
+                スマートフォン対応で、若い世代のお客様からのお問い合わせも増えています。
+                投資以上の価値を実感しています。」
               </p>
               <div className="flex text-yellow-400 mb-2">
                 {[...Array(5)].map((_, i) => (
@@ -445,27 +448,27 @@ export default function WebDevelopment() {
                   </svg>
                 ))}
               </div>
-              <p className="text-sm text-blue-700 font-medium">コーポレートサイト</p>
+              <p className="text-sm text-blue-700 font-medium">企業サイト導入</p>
             </div>
 
-            {/* ECサイト制作 */}
+            {/* 集客効果 */}
             <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 p-8 rounded-3xl border border-gray-100/50">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mr-4">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium text-gray-900">山田商店</h4>
-                  <p className="text-sm text-gray-600">ECサイト制作</p>
+                  <h4 className="font-medium text-gray-900">集客力の向上</h4>
+                  <p className="text-sm text-gray-600">オンライン集客の強化</p>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed mb-4">
-                「オンラインショップを初めて作るということで不安でしたが、
-                丁寧にサポートしていただき、想像以上の仕上がりになりました。
-                決済システムも安全で使いやすく、お客様からも好評です。
-                売上も順調に伸びており、本当にお願いして良かったです。」
+                「Webサイトを作ってから、新規のお客様からのお問い合わせが大幅に増加しました。
+                特に検索からの流入が多く、地域での認知度も上がったと感じています。
+                お客様が事前に情報を確認できるので、商談もスムーズに進むようになりました。
+                作って本当に良かったです。」
               </p>
               <div className="flex text-yellow-400 mb-2">
                 {[...Array(5)].map((_, i) => (
@@ -474,7 +477,7 @@ export default function WebDevelopment() {
                   </svg>
                 ))}
               </div>
-              <p className="text-sm text-blue-700 font-medium">ECサイト</p>
+              <p className="text-sm text-blue-700 font-medium">集客向上効果</p>
             </div>
           </div>
         </div>

@@ -88,20 +88,18 @@ export default function SDGs() {
 
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p className="text-lg">
-                  株式会社バディは、事業を通じて社会課題の解決に貢献することを使命としています。
-                  「食」から始まった私たちの事業は、人々の健康と幸福、そして持続可能な社会の実現を目指しています。
+                  株式会社バディは、環境負荷の軽減と地域社会への貢献を重要な使命と考えています。
+                  小さな会社だからこそできる、身近で実践的な取り組みから始めています。
                 </p>
                 
                 <p>
-                  厨房委託業では、食品ロスの削減と栄養バランスの取れた食事の提供により、
-                  健康的な社会づくりに貢献しています。また、地産地消を推進し、
-                  地域経済の活性化にも取り組んでいます。
+                  デジタル技術を活用した業務効率化により、紙資源の節約やリモートワークによるCO2削減に取り組んでいます。
+                  また、地域の中小企業様のデジタル化支援を通じて、地域全体の生産性向上に貢献しています。
                 </p>
                 
                 <p>
-                  デジタル事業においても、中小企業のDX推進を支援することで、
-                  地域社会の持続可能な発展に寄与しています。
-                  AI技術を活用した業務効率化により、働き方改革の実現にも貢献しています。
+                  社員一人ひとりが働きがいを感じられる職場環境づくりにも注力し、
+                  資格取得支援など、継続的な成長をサポートする制度を整備しています。
                 </p>
               </div>
             </div>
@@ -202,7 +200,7 @@ export default function SDGs() {
           </div>
           
           {/* 取り組みカード */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
             {/* 環境への取り組み */}
             <div className="group p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -214,53 +212,26 @@ export default function SDGs() {
               <ul className="text-gray-600 text-sm leading-relaxed space-y-2">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  食品ロス削減による環境負荷軽減
+                  オフィスでのペーパーレス化推進（月間用紙使用量30%削減）
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  地産地消の推進とCO2削減
+                  リモートワーク導入による通勤CO2削減
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  リサイクル可能な包装材の使用
+                  LED照明への切り替えによる省エネ化
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  デジタル化によるペーパーレス推進
+                  クラウドサービス活用によるサーバー電力削減
                 </li>
               </ul>
             </div>
             
-            {/* 社会貢献 */}
-            <div className="group p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-medium text-gray-900 mb-4 text-center">地域社会貢献</h4>
-              <ul className="text-gray-600 text-sm leading-relaxed space-y-2">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  高齢者施設での栄養価の高い食事提供
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  地域イベントでのボランティア活動
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  中小企業のデジタル化支援
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  地域産業の活性化への協力
-                </li>
-              </ul>
-            </div>
-            
+                  
             {/* 働きがい */}
-            <div className="group p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+            <div className="group p-8 bg-white/60 backdrop-blur-sm rounded-3xl border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 715.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -270,19 +241,19 @@ export default function SDGs() {
               <ul className="text-gray-600 text-sm leading-relaxed space-y-2">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  柔軟な働き方制度の導入
+                  フレックスタイム制度による柔軟な働き方
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  スキルアップ支援制度
+                  技術書購入支援・資格取得支援制度
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  ダイバーシティの推進
+                  定期的な1on1ミーティングでキャリア支援
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  健康経営の実践
+                  健康診断費用全額負担・メンタルヘルスケア
                 </li>
               </ul>
             </div>
@@ -304,36 +275,36 @@ export default function SDGs() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-light text-green-700 mb-4">85<span className="text-2xl">%</span></div>
-                <h4 className="text-lg font-medium text-gray-900 mb-2">食品ロス削減率</h4>
-                <p className="text-gray-600 text-sm">適切な食材管理により大幅な削減を実現</p>
+                <div className="text-4xl md:text-5xl font-light text-green-700 mb-4">30<span className="text-2xl">%</span></div>
+                <h4 className="text-lg font-medium text-gray-900 mb-2">ペーパーレス化率</h4>
+                <p className="text-gray-600 text-sm">デジタル化推進により用紙使用量を削減</p>
               </div>
             </div>
             
             <div className="text-center group">
               <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-light text-blue-700 mb-4">12<span className="text-2xl">社</span></div>
-                <h4 className="text-lg font-medium text-gray-900 mb-2">地域企業支援</h4>
-                <p className="text-gray-600 text-sm">中小企業のデジタル化を支援</p>
+                <div className="text-4xl md:text-5xl font-light text-blue-700 mb-4">2<span className="text-2xl">年</span></div>
+                <h4 className="text-lg font-medium text-gray-900 mb-2">LED照明使用歴</h4>
+                <p className="text-gray-600 text-sm">省エネ照明で電力消費を削減</p>
               </div>
             </div>
             
             <div className="text-center group">
               <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-light text-purple-700 mb-4">95<span className="text-2xl">%</span></div>
-                <h4 className="text-lg font-medium text-gray-900 mb-2">従業員満足度</h4>
-                <p className="text-gray-600 text-sm">働きがいのある職場環境を実現</p>
+                <div className="text-4xl md:text-5xl font-light text-purple-700 mb-4">100<span className="text-2xl">%</span></div>
+                <h4 className="text-lg font-medium text-gray-900 mb-2">リモートワーク率</h4>
+                <p className="text-gray-600 text-sm">柔軟な働き方で通勤CO2を削減</p>
               </div>
             </div>
             
             <div className="text-center group">
               <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-gray-100/50 hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="text-4xl md:text-5xl font-light text-orange-700 mb-4">3.2<span className="text-2xl">t</span></div>
-                <h4 className="text-lg font-medium text-gray-900 mb-2">CO2削減量</h4>
-                <p className="text-gray-600 text-sm">年間で削減したCO2排出量</p>
+                <div className="text-4xl md:text-5xl font-light text-orange-700 mb-4">24<span className="text-2xl">h</span></div>
+                <h4 className="text-lg font-medium text-gray-900 mb-2">フレックス制度</h4>
+                <p className="text-gray-600 text-sm">柔軟な働き方で生産性向上を実現</p>
               </div>
             </div>
           </div>
@@ -374,8 +345,8 @@ export default function SDGs() {
                     <span className="text-white font-bold text-sm">2025</span>
                   </div>
                   <div>
-                    <h6 className="font-medium text-gray-900 mb-2">カーボンニュートラル達成</h6>
-                    <p className="text-gray-600 text-sm">事業活動におけるCO2排出量実質ゼロを実現</p>
+                    <h6 className="font-medium text-gray-900 mb-2">ペーパーレス化50%達成</h6>
+                    <p className="text-gray-600 text-sm">オフィス業務の更なるデジタル化を推進</p>
                   </div>
                 </div>
                 
@@ -384,8 +355,8 @@ export default function SDGs() {
                     <span className="text-white font-bold text-sm">2027</span>
                   </div>
                   <div>
-                    <h6 className="font-medium text-gray-900 mb-2">地域企業支援100社</h6>
-                    <p className="text-gray-600 text-sm">中小企業のデジタル化支援を大幅に拡大</p>
+                    <h6 className="font-medium text-gray-900 mb-2">地域企業支援20社</h6>
+                    <p className="text-gray-600 text-sm">IT相談会を通じた支援企業数を拡大</p>
                   </div>
                 </div>
                 
@@ -394,8 +365,8 @@ export default function SDGs() {
                     <span className="text-white font-bold text-sm">2030</span>
                   </div>
                   <div>
-                    <h6 className="font-medium text-gray-900 mb-2">食品ロス95%削減</h6>
-                    <p className="text-gray-600 text-sm">より高度な管理システムで食品ロスを最小化</p>
+                    <h6 className="font-medium text-gray-900 mb-2">完全ペーパーレス化</h6>
+                    <p className="text-gray-600 text-sm">全業務プロセスのデジタル化を完了</p>
                   </div>
                 </div>
               </div>
@@ -419,18 +390,18 @@ export default function SDGs() {
                     リーディングカンパニーを目指します。
                   </p>
                   
-                  <div className="bg-white/50 rounded-2xl p-6 border border-green-200/30">
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-light text-green-700 mb-1">100%</div>
-                        <p className="text-xs text-gray-600">再生可能エネルギー</p>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-light text-blue-700 mb-1">1000</div>
-                        <p className="text-xs text-gray-600">雇用創出数</p>
+                    <div className="bg-white/50 rounded-2xl p-6 border border-green-200/30">
+                      <div className="grid grid-cols-2 gap-4 text-center">
+                        <div>
+                          <div className="text-2xl font-light text-green-700 mb-1">50社</div>
+                          <p className="text-xs text-gray-600">支援企業数</p>
+                        </div>
+                        <div>
+                          <div className="text-2xl font-light text-blue-700 mb-1">80%</div>
+                          <p className="text-xs text-gray-600">ペーパーレス化率</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
                 </div>
               </div>
               
