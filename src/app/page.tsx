@@ -85,7 +85,7 @@ export default function Home() {
           className="object-cover"
         />
           {/* スマホ用オーバーレイ */}
-          <div className="absolute inset-0 bg-white/60"></div>
+          <div className="absolute inset-0 bg-black/75"></div>
         </div>
         
         {/* PC用斜め分割背景 */}
@@ -105,16 +105,16 @@ export default function Home() {
           {/* スマホ版 - 縦並びレイアウト */}
           <div className="lg:hidden text-center py-12">
             {/* キャッチコピー */}
-            <h1 className="text-3xl md:text-4xl font-light leading-tight text-gray-900 mb-6 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+            <h1 className="text-3xl md:text-4xl font-light leading-tight text-white mb-6 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
               ビジネスの
               <span className="block font-medium">総合パートナー</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-6 font-light leading-relaxed animate-fade-in-up opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
+            <p className="text-lg md:text-xl text-gray-200 mb-6 font-light leading-relaxed animate-fade-in-up opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
               として共に成長する
             </p>
             
-            <h2 className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed animate-fade-in-up opacity-0" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
+            <h2 className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in-up opacity-0" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
               厨房委託から最新のAI技術まで、多角的なソリューションで<br />
               お客様の事業成長をサポートします
             </h2>
@@ -122,10 +122,10 @@ export default function Home() {
             
             {/* CTAボタン */}
             <div className="flex flex-col gap-4 animate-fade-in-up opacity-0" style={{animationDelay: '1.0s', animationFillMode: 'forwards'}}>
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact" className="btn bg-white text-black hover:bg-gray-100">
                 無料相談を始める
               </Link>
-              <Link href="#services" className="btn btn-secondary">
+              <Link href="#services" className="btn bg-transparent text-white border-2 border-white hover:bg-white hover:text-black">
                 サービス一覧
               </Link>
             </div>

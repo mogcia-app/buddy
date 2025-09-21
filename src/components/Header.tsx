@@ -10,7 +10,7 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-lg">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-2 border-black shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:py-6">
           {/* ロゴ */}
@@ -29,7 +29,7 @@ export default function Header() {
 
           {/* PCナビ */}
           <nav className="hidden md:flex space-x-8 items-center">
-            <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">会社概要</Link>
+            <Link href="/about" className="text-gray-700 hover:text-black transition-colors font-medium">会社概要</Link>
             
             {/* 事業内容ドロップダウン */}
             <div 
@@ -37,7 +37,7 @@ export default function Header() {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="text-gray-700 hover:text-gray-900 transition-colors font-medium flex items-center">
+              <button className="text-gray-700 hover:text-black transition-colors font-medium flex items-center">
                 事業内容
                 <svg className={`w-4 h-4 ml-1 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -148,7 +148,7 @@ export default function Header() {
               )}
             </div>
             
-            <Link href="/sdgs" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">社会への取り組み</Link>
+            <Link href="/sdgs" className="text-gray-700 hover:text-black transition-colors font-medium">社会への取り組み</Link>
             <Link href="/recruit" className="btn btn-secondary">採用情報</Link>
             <Link href="/contact" className="btn btn-primary">お問い合わせ</Link>
           </nav>
