@@ -548,11 +548,16 @@ export default function Home() {
               バディは「食」から始まった会社です。厨房委託業や飲食事業で培った「安心・安全」への想いを基盤に、<br className="hidden md:block" />
               Web制作、SNS運用、AI技術まで事業領域を拡げています。
             </p>
-            <h3 className="text-2xl md:text-4xl text-gray-900 mb-8 font-light leading-relaxed">
-              多様な事業を通じて<br />
-              お客様の真の「バディ」として<br />
-              共に成長し続けます
-            </h3>
+            <p className="text-2xl md:text-4xl text-gray-900 mb-8 font-light leading-relaxed">
+            お客様の「バディ」として
+株式会社バディは、飲食店の経営からスタートした会社です。 お客様に美味しい料理を提供し、笑顔になっていただく瞬間に、 「食」を通じて人と人をつなぐ仕事の素晴らしさを実感してきました。
+
+飲食店経営で培った経験を活かし、次に厨房委託業へと展開しました。 介護施設や企業の食堂で、より多くの方々に安全で美味しい食事を提供することで、 「食」への想いをさらに深めることができました。
+
+その後、お客様から「Webサイトも作ってもらえないか」「SNSの運用も手伝って欲しい」 といったご相談をいただくようになりました。そこで気づいたのは、 お客様が求めているのは「何でも相談できる信頼できるパートナー」だということです。
+
+「バディ」という社名には、お客様と対等な関係で、 共に課題を解決し、共に成長していきたいという想いを込めました。 飲食店経営から厨房委託業で培った「安全・品質へのこだわり」と「人を想う心」を、 すべての事業の根幹に置き、お客様のビジネス成功をサポートしてまいります。
+            </p>
             <div className="space-y-4">
               <Link href="/about" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
                 会社概要 COMPANY
