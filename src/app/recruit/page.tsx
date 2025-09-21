@@ -21,7 +21,7 @@ export default function Recruit() {
           <h1 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900">「食」で地域を支える仲間を募集しています</h1>
           <div className="w-20 h-px bg-gray-300 mx-auto my-8 mt-4"></div>
           <p className="mt-4 text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            介護施設の厨房を、"安心・安全・あたたかさ"で満たす仕事。<br className="hidden md:inline" />
+            介護施設の厨房を、&ldquo;安心・安全・あたたかさ&rdquo;で満たす仕事。<br className="hidden md:inline" />
             経験者はもちろん、未経験の方も丁寧にサポートします。
           </p>
           <a
@@ -230,7 +230,7 @@ export default function Recruit() {
       {/* 最終CTA */}
       <section className="py-16 md:py-20 bg-white border-t border-gray-200 text-center">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">一緒に"安心とあたたかさ"を届けませんか？</h2>
+          <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">一緒に&ldquo;安心とあたたかさ&rdquo;を届けませんか？</h2>
           <div className="w-20 h-px bg-gray-300 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 leading-relaxed">応募前のご相談もお気軽に。担当者が丁寧にご案内します。</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
