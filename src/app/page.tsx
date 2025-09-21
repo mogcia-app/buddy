@@ -532,44 +532,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUTセクション - GIG風 */}
+         {/* ABOUTセクション */}
       <section className="py-32 bg-white">
         <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
-            <div className="flex items-center mb-8">
-              <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <div>
-                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">ABOUT</h2>
-                <p className="text-lg text-gray-500 mt-2">アバウト</p>
+            <div className="animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
+              <div className="flex items-center mb-8">
+                <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
+                <div>
+                  <h2 className="text-4xl md:text-6xl font-bold text-gray-900">ABOUT</h2>
+                  <p className="text-lg text-gray-500 mt-2">アバウト</p>
+                </div>
+              </div>
+              
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
+                バディは「食」から始まった会社です。厨房委託業や飲食事業で培った「安心・安全」への想いを基盤に、<br className="hidden md:block" />
+                Web制作、SNS運用、AI技術まで事業領域を拡げています。
+              </p>
+              
+              <h3 className="text-2xl md:text-3xl text-gray-900 mb-8 font-light leading-relaxed">
+                お客様と対等な関係で、<br />
+                共に課題を解決し、<br />
+                共に成長していく真の「バディ」として
+              </h3>
+              
+              <div className="space-y-4">
+                <Link href="/about" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
+                  会社概要 COMPANY
+                </Link>
+                <Link href="/recruit" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
+                  採用情報 RECRUIT
+                </Link>
+                <Link href="/contact" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
+                  お問い合わせ CONTACT
+                </Link>
               </div>
             </div>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-              バディは「食」から始まった会社です。厨房委託業や飲食事業で培った「安心・安全」への想いを基盤に、<br className="hidden md:block" />
-              Web制作、SNS運用、AI技術まで事業領域を拡げています。
-            </p>
-            <p className="text-2xl md:text-4xl text-gray-900 mb-8 font-light leading-relaxed">
-            お客様の「バディ」として
-株式会社バディは、飲食店の経営からスタートした会社です。 お客様に美味しい料理を提供し、笑顔になっていただく瞬間に、 「食」を通じて人と人をつなぐ仕事の素晴らしさを実感してきました。
-
-飲食店経営で培った経験を活かし、次に厨房委託業へと展開しました。 介護施設や企業の食堂で、より多くの方々に安全で美味しい食事を提供することで、 「食」への想いをさらに深めることができました。
-
-その後、お客様から「Webサイトも作ってもらえないか」「SNSの運用も手伝って欲しい」 といったご相談をいただくようになりました。そこで気づいたのは、 お客様が求めているのは「何でも相談できる信頼できるパートナー」だということです。
-
-「バディ」という社名には、お客様と対等な関係で、 共に課題を解決し、共に成長していきたいという想いを込めました。 飲食店経営から厨房委託業で培った「安全・品質へのこだわり」と「人を想う心」を、 すべての事業の根幹に置き、お客様のビジネス成功をサポートしてまいります。
-            </p>
-            <div className="space-y-4">
-              <Link href="/about" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
-                会社概要 COMPANY
-              </Link>
-              <Link href="/recruit" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
-                採用情報 RECRUIT
-              </Link>
-              <Link href="/contact" className="block text-gray-900 font-medium hover:text-gray-700 hover:translate-x-2 transition-all duration-300">
-                お問い合わせ CONTACT
-              </Link>
-            </div>
-          </div>
+            
             <div className="relative h-96 overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-500 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <Image
                 src="/pexels-fauxels-3184635.jpg"

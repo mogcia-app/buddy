@@ -288,64 +288,44 @@ export default function KitchenManagement() {
             <h3 className="text-3xl md:text-5xl font-light text-gray-900 mb-6">対応施設</h3>
             <div className="w-16 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              様々な規模・業態の施設に対応し、それぞれの特性に合わせたサービスを提供します
+              介護施設と企業食堂に特化し、それぞれの特性に合わせた専門的なサービスを提供します
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <div className="text-center group">
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-br from-slate-50 to-gray-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">介護施設</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  特別養護老人ホーム、有料老人ホーム、デイサービスセンターなど
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">介護施設</h4>
+                <div className="space-y-2 text-gray-600">
+                  <p className="text-sm">特別養護老人ホーム</p>
+                  <p className="text-sm">有料老人ホーム</p>
+                  <p className="text-sm">デイサービスセンター</p>
+                  <p className="text-sm">グループホーム</p>
+                  <p className="text-sm">ショートステイ施設</p>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">医療機関</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  病院、クリニック、リハビリテーション施設など
-                </p>
               </div>
             </div>
 
             <div className="text-center group">
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="bg-gradient-to-br from-slate-50 to-gray-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-700 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">企業食堂</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  オフィス、工場、学校などの社員食堂・学食
-                </p>
-              </div>
-            </div>
-
-            <div className="text-center group">
-              <div className="bg-gradient-to-br from-slate-50 to-indigo-50/50 p-8 rounded-3xl border border-gray-100/50 group-hover:bg-white/80 transition-all duration-300 hover:-translate-y-1">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-800 to-red-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
+                <h4 className="text-xl font-medium text-gray-900 mb-4">企業食堂</h4>
+                <div className="space-y-2 text-gray-600">
+                  <p className="text-sm">オフィス社員食堂</p>
+                  <p className="text-sm">工場食堂</p>
+                  <p className="text-sm">病院職員食堂</p>
+                  <p className="text-sm">学校給食</p>
+                  <p className="text-sm">その他法人向け給食</p>
                 </div>
-                <h4 className="text-lg font-medium text-gray-900 mb-3">教育施設</h4>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  保育園、幼稚園、学校給食センターなど
-                </p>
               </div>
             </div>
           </div>
