@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter, useParams } from 'next/navigation';
+import AdminProtected from '../../../../../components/AdminProtected';
 
-export default function EditNews() {
+function EditNews() {
   const router = useRouter();
   const params = useParams();
   const id = params.id as string;
@@ -305,5 +306,13 @@ export default function EditNews() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function EditNewsPage() {
+  return (
+    <AdminProtected>
+      <EditNews />
+    </AdminProtected>
   );
 }

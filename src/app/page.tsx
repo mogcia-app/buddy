@@ -136,7 +136,10 @@ export default function Home() {
           <div className="mb-16">
             <div className="flex items-center mb-8">
               <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">SERVICE</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">SERVICE</h2>
+                <p className="text-lg text-gray-500 mt-2">サービス</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               食から始まった私たちの事業は、今やAI技術まで幅広い領域をカバー。<br className="hidden md:block" />
@@ -212,7 +215,7 @@ export default function Home() {
               <div className="bg-white border border-gray-200 p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 relative">
                 <div className="mb-6 flex justify-between items-start">
                   <div>
-                    <p className="text-sm text-gray-500 mb-2">介護施設・企業食堂の運営サポート</p>
+                    <p className="text-sm text-gray-500 mb-2">介護施設の運営サポート</p>
                     <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">厨房委託業</h3>
                     <p className="text-sm text-gray-500 uppercase tracking-wider">KITCHEN<br />MANAGEMENT</p>
                   </div>
@@ -223,7 +226,7 @@ export default function Home() {
                   </div>
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  介護施設や企業食堂の厨房運営をトータルサポート。栄養管理から衛生管理まで、プロフェッショナルが安心・安全な食事づくりをお手伝いします。
+                  介護施設での厨房運営をトータルサポート。栄養管理から衛生管理まで、プロフェッショナルが安心・安全な食事づくりをお手伝いします。
                 </p>
                 <div className="mt-6 relative h-48 overflow-hidden">
                   <Image
@@ -320,7 +323,10 @@ export default function Home() {
           <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
             <div className="flex items-center mb-8">
               <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">NEWS</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">NEWS</h2>
+                <p className="text-lg text-gray-500 mt-2">ニュース</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               最新のお知らせをお届けします。
@@ -331,7 +337,7 @@ export default function Home() {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">お知らせ</h3>
             <Link 
               href="/news" 
-              className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
               すべて見る →
             </Link>
@@ -354,7 +360,10 @@ export default function Home() {
           <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
             <div className="flex items-center mb-8">
               <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">STRENGTH</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">STRENGTH</h2>
+                <p className="text-lg text-gray-500 mt-2">強み</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               食から始まったバディだからこそ提供できる、他にはない強みがあります。<br className="hidden md:block" />
@@ -432,7 +441,10 @@ export default function Home() {
           <div className="animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
             <div className="flex items-center mb-8">
               <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">ABOUT</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">ABOUT</h2>
+                <p className="text-lg text-gray-500 mt-2">アバウト</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
               バディは「食」から始まった会社です。厨房委託業や飲食事業で培った「安心・安全」への想いを基盤に、<br className="hidden md:block" />
@@ -475,7 +487,10 @@ export default function Home() {
           <div className="mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
             <div className="flex items-center mb-8">
               <div className="w-4 h-4 bg-black rounded-full mr-4 animate-pulse"></div>
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">BLOG</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">BLOG</h2>
+                <p className="text-lg text-gray-500 mt-2">ブログ</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl leading-relaxed">
               事業の最新情報や業界のトレンドをお届けします。
@@ -486,7 +501,7 @@ export default function Home() {
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900">ブログ</h3>
             <Link 
               href="/blog" 
-              className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+              className="text-gray-700 hover:text-gray-900 font-medium transition-colors"
             >
               すべて見る →
             </Link>
@@ -722,7 +737,10 @@ export default function Home() {
           <div className="text-center mb-16 animate-fade-in-up opacity-0" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
             <div className="flex justify-center items-center mb-8">
             
-              <h2 className="text-4xl md:text-6xl font-bold text-gray-900">RECRUIT</h2>
+              <div>
+                <h2 className="text-4xl md:text-6xl font-bold text-gray-900">RECRUIT</h2>
+                <p className="text-lg text-gray-500 mt-2">リクルート</p>
+              </div>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-8">
               食から始まり、デジタル領域まで幅広く事業を展開するバディでは、<br className="hidden md:block" />

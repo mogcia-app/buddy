@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import AdminProtected from '../../../components/AdminProtected';
 
 interface NewsItem {
   id: string;
@@ -12,7 +13,7 @@ interface NewsItem {
   isImportant: boolean;
 }
 
-export default function NewsList() {
+function NewsList() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState('all');
@@ -360,5 +361,13 @@ export default function NewsList() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function NewsListPage() {
+  return (
+    <AdminProtected>
+      <NewsList />
+    </AdminProtected>
   );
 }

@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import AdminProtected from '../../../../components/AdminProtected';
 
-export default function CreateNews() {
+function CreateNews() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: '',
@@ -228,5 +229,13 @@ export default function CreateNews() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function CreateNewsPage() {
+  return (
+    <AdminProtected>
+      <CreateNews />
+    </AdminProtected>
   );
 }

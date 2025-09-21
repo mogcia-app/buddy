@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import AdminProtected from '../../components/AdminProtected';
+import { useAuth } from '../../contexts/AuthContext';
 
 interface NewsItem {
   id: string;
@@ -19,10 +21,11 @@ interface BlogItem {
   featured: boolean;
 }
 
-export default function AdminDashboard() {
+function AdminDashboard() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [blog, setBlog] = useState<BlogItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const { user, logout } = useAuth();
 
   useEffect(() => {
     fetchData();
@@ -89,12 +92,29 @@ export default function AdminDashboard() {
               <h1 className="text-2xl font-bold text-gray-900">管理画面</h1>
               <p className="text-gray-600">お知らせ・ブログの管理</p>
             </div>
-            <Link 
-              href="/" 
-              className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
-            >
-              サイトに戻る
-            </Link>
+            <div className="flex items-center space-x-4">
+              <span className="text-sm text-gray-600">
+                {user?.email}
+              </span>
+              <button
+                onClick={async () => {
+                  try {
+                    await logout();
+                  } catch (error) {
+                    console.error('ログアウトエラー:', error);
+                  }
+                }}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              >
+                ログアウト
+              </button>
+              <Link 
+                href="/" 
+                className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                サイトに戻る
+              </Link>
+            </div>
           </div>
         </div>
       </header>
@@ -294,5 +314,13 @@ export default function AdminDashboard() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AdminDashboardPage() {
+  return (
+    <AdminProtected>
+      <AdminDashboard />
+    </AdminProtected>
   );
 }
