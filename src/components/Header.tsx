@@ -55,7 +55,7 @@ export default function Header() {
                   <div className="grid grid-cols-2 gap-6">
                     {/* 左列 - 食関連事業 */}
                     <div className="space-y-4">
-                      <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Food Business</div>
+                      <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">食関連事業</div>
                       
                       <Link href="/kitchen-management" className="group block p-4 rounded-xl hover:bg-gray-50 transition-all duration-300 hover:scale-105">
                         <div className="flex items-start">

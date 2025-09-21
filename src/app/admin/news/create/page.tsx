@@ -185,7 +185,6 @@ function CreateNews() {
                   )}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{formData.title}</h3>
-                <p className="text-gray-600 mb-4">{formData.excerpt}</p>
                 <div className="text-gray-800 whitespace-pre-wrap">{formData.excerpt}</div>
               </div>
             </div>

@@ -87,33 +87,35 @@ function AdminDashboard() {
       {/* ヘッダー */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-6 space-y-4 sm:space-y-0">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">管理画面</h1>
-              <p className="text-gray-600">お知らせ・ブログの管理</p>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">管理画面</h1>
+              <p className="text-sm sm:text-base text-gray-600">お知らせ・ブログの管理</p>
             </div>
-            <div className="flex items-center space-x-4">
-              <span className="text-sm text-gray-600">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+              <span className="text-xs sm:text-sm text-gray-600">
                 {user?.email}
               </span>
-              <button
-                onClick={async () => {
-                  try {
-                    await logout();
-                  } catch (error) {
-                    console.error('ログアウトエラー:', error);
-                  }
-                }}
-                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
-              >
-                ログアウト
-              </button>
-              <Link 
-                href="/" 
-                className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
-              >
-                サイトに戻る
-              </Link>
+              <div className="flex space-x-2 sm:space-x-4">
+                <button
+                  onClick={async () => {
+                    try {
+                      await logout();
+                    } catch (error) {
+                      console.error('ログアウトエラー:', error);
+                    }
+                  }}
+                  className="px-3 py-2 text-sm bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  ログアウト
+                </button>
+                <Link 
+                  href="/" 
+                  className="px-3 py-2 text-sm bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                >
+                  サイトに戻る
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +123,7 @@ function AdminDashboard() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* 統計カード */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="flex items-center">
               <div className="p-2 bg-blue-100 rounded-lg">
@@ -185,7 +187,7 @@ function AdminDashboard() {
             <h2 className="text-lg font-semibold text-gray-900">クイックアクション</h2>
           </div>
           <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Link 
                 href="/admin/news/create"
                 className="flex items-center p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
@@ -219,7 +221,7 @@ function AdminDashboard() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* 最近のお知らせ */}
           <div className="bg-white rounded-lg shadow">
             <div className="px-6 py-4 border-b flex justify-between items-center">

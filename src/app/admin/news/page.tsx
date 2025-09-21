@@ -105,21 +105,21 @@ function NewsList() {
       {/* ヘッダー */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-6 space-y-4 sm:space-y-0">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">お知らせ管理</h1>
-              <p className="text-gray-600">お知らせの一覧と管理</p>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">お知らせ管理</h1>
+              <p className="text-sm sm:text-base text-gray-600">お知らせの一覧と管理</p>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
               <Link 
                 href="/admin"
-                className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
+                className="px-4 py-2 text-sm border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors text-center"
               >
                 ダッシュボードに戻る
               </Link>
               <Link 
                 href="/admin/news/create"
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center"
               >
                 新しいお知らせ
               </Link>

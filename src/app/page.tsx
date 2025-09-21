@@ -16,9 +16,25 @@ interface NewsItem {
   isImportant: boolean;
 }
 
+
+interface BlogItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  featured: boolean;
+  author: string;
+  readTime: number;
+  imageUrl?: string;
+  tags: string[];
+}
+
 export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
+  const [blog, setBlog] = useState<BlogItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [blogLoading, setBlogLoading] = useState(true);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -35,7 +51,22 @@ export default function Home() {
       }
     };
 
+    const fetchBlog = async () => {
+      try {
+        const response = await fetch('/api/blog?limit=3');
+        const data = await response.json();
+        if (data.success) {
+          setBlog(data.data);
+        }
+      } catch (error) {
+        console.error('ブログの取得エラー:', error);
+      } finally {
+        setBlogLoading(false);
+      }
+    };
+
     fetchNews();
+    fetchBlog();
   }, []);
   return (
     <div className="min-h-screen">
@@ -383,7 +414,7 @@ export default function Home() {
             </div>
           ) : news.length > 0 ? (
             <div className="space-y-4 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              {news.map((item, index) => (
+              {news.map((item) => (
                 <div key={item.id} className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -574,213 +605,97 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="relative animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-            {/* 左矢印 */}
-            <button className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            {/* 右矢印 */}
-            <button className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors">
-              <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
-              {/* ブログカード1 - ビジネス */}
-              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-100 relative">
-                  <div className="flex items-center justify-center h-full">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
-                      ビジネス
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                    飲食店経営の成功ポイント
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    飲食店経営において成功するためのポイントを立地選びからマーケティングまで解説します。
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2024/1/15
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      6分
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ブログカード2 - テクノロジー */}
-              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-100 relative">
-                  <div className="flex items-center justify-center h-full">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
-                      テクノロジー
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                    AI技術で業務効率化を実現する方法
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    AI技術を活用した業務効率化の方法と注意点について解説します。
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2024/1/12
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      8分
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ブログカード3 - 食 */}
-              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-100 relative">
-                  <div className="flex items-center justify-center h-full">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
-                      食
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                    厨房委託業で培った「安心・安全」の想い
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    厨房委託業で培った「安心・安全」への想いを、全ての事業に活かしています。
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2024/1/10
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      5分
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ブログカード4 - ビジネス */}
-              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-100 relative">
-                  <div className="flex items-center justify-center h-full">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-medium">
-                      ビジネス
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                    真のパートナーシップとは何か
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    単なる業務委託ではなく、お客様の「バディ」として長期的な成功を共に目指します。
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2024/1/8
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      7分
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* ブログカード5 - テクノロジー */}
-              <div className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="aspect-video bg-gray-100 relative">
-                  <div className="flex items-center justify-center h-full">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-medium">
-                      テクノロジー
-                    </span>
-                  </div>
-                </div>
-                <div className="p-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
-                    Webサイト制作で重要なUXデザインの考え方
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">
-                    Webサイト制作におけるUXデザインの重要性と改善ポイントについて解説します。
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2024/1/5
-                    </div>
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      9分
-                    </div>
-                  </div>
-                </div>
+          {blogLoading ? (
+            <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-4"></div>
+                <p className="text-gray-600">読み込み中...</p>
               </div>
             </div>
-          </div>
+          ) : blog.length > 0 ? (
+            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              {blog.map((item) => {
+                const getCategoryColor = (category: string) => {
+                  switch (category) {
+                    case 'kitchen': return 'bg-green-100 text-green-800';
+                    case 'restaurant': return 'bg-orange-100 text-orange-800';
+                    case 'web': return 'bg-blue-100 text-blue-800';
+                    case 'sns': return 'bg-purple-100 text-purple-800';
+                    case 'ai': return 'bg-indigo-100 text-indigo-800';
+                    case 'other': return 'bg-gray-100 text-gray-800';
+                    default: return 'bg-gray-100 text-gray-800';
+                  }
+                };
+
+                const getCategoryLabel = (category: string) => {
+                  switch (category) {
+                    case 'kitchen': return '厨房委託';
+                    case 'restaurant': return '飲食';
+                    case 'web': return 'HP作成';
+                    case 'sns': return 'SNS運用';
+                    case 'ai': return 'AI開発';
+                    case 'other': return 'その他';
+                    default: return category;
+                  }
+                };
+
+                return (
+                  <div key={item.id} className="flex-shrink-0 w-80 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                    {/* サムネイル */}
+                    <div className="aspect-video bg-gray-100 relative">
+                      {item.imageUrl ? (
+                        <Image
+                          src={item.imageUrl}
+                          alt={item.title}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                          </svg>
+                        </div>
+                      )}
+                      <div className="absolute top-3 left-3">
+                        <span className={`px-2 py-1 rounded text-xs font-medium ${getCategoryColor(item.category)}`}>
+                          {getCategoryLabel(item.category)}
+                        </span>
+                      </div>
+                      {item.featured && (
+                        <div className="absolute top-3 right-3">
+                          <span className="px-2 py-1 bg-yellow-400 text-yellow-900 rounded text-xs font-medium">
+                            注目
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                        {item.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span>{new Date(item.publishedAt).toLocaleDateString('ja-JP')}</span>
+                        <span>{item.readTime}分で読める</span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-center py-12">
+                <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <p className="text-gray-600">ブログ記事はありません</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

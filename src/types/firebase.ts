@@ -19,7 +19,7 @@ export interface BlogItem {
   title: string;
   content: string;
   excerpt: string;
-  category: 'business' | 'technology' | 'food' | 'tips';
+  category: 'kitchen' | 'restaurant' | 'web' | 'sns' | 'ai' | 'other';
   tags: string[];
   featured: boolean;
   publishedAt: Date;
@@ -55,8 +55,10 @@ export const NEWS_CATEGORIES = {
 } as const;
 
 export const BLOG_CATEGORIES = {
-  business: 'ビジネス',
-  technology: 'テクノロジー',
-  food: '食',
-  tips: 'Tips'
+  kitchen: '厨房委託',
+  restaurant: '飲食',
+  web: 'HP作成',
+  sns: 'SNS運用',
+  ai: 'AI開発',
+  other: 'その他'
 } as const;
