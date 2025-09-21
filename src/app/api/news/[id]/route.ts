@@ -83,7 +83,10 @@ export async function DELETE(
 ) {
   try {
     const { id } = await params;
+    console.log('削除対象ID:', id);
+    
     const success = await deleteNews(id);
+    console.log('Firestore削除結果:', success);
     
     if (success) {
       return NextResponse.json({

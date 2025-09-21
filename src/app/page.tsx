@@ -1,11 +1,42 @@
-import React from "react";
+'use client';
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactSection from "../components/ContactSection";
 
+interface NewsItem {
+  id: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  isImportant: boolean;
+}
+
 export default function Home() {
+  const [news, setNews] = useState<NewsItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const response = await fetch('/api/news?limit=3');
+        const data = await response.json();
+        if (data.success) {
+          setNews(data.data);
+        }
+      } catch (error) {
+        console.error('お知らせの取得エラー:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
   return (
     <div className="min-h-screen">
       <Header />
@@ -343,14 +374,50 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-            <div className="text-center py-12">
-              <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <p className="text-gray-600">お知らせはありません</p>
+          {loading ? (
+            <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto mb-4"></div>
+                <p className="text-gray-600">読み込み中...</p>
+              </div>
             </div>
-          </div>
+          ) : news.length > 0 ? (
+            <div className="space-y-4 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              {news.map((item, index) => (
+                <div key={item.id} className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center mb-2">
+                        {item.isImportant && (
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 mr-2">
+                            重要
+                          </span>
+                        )}
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                          {item.category === 'announcement' ? 'お知らせ' : 
+                           item.category === 'update' ? '更新情報' : 'イベント'}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm">{item.excerpt}</p>
+                    </div>
+                    <div className="ml-4 text-sm text-gray-500">
+                      {new Date(item.publishedAt).toLocaleDateString('ja-JP')}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+              <div className="text-center py-12">
+                <svg className="mx-auto h-12 w-12 text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <p className="text-gray-600">お知らせはありません</p>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

@@ -45,10 +45,13 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    console.log('=== お知らせ作成API開始 ===');
+    
     const body = await request.json();
+    console.log('受信データ:', body);
     
     // バリデーション
-    if (!body.title || !body.content || !body.excerpt || !body.category) {
+    if (!body.title || !body.excerpt || !body.category) {
       return NextResponse.json(
         { success: false, message: '必須フィールドが不足しています' },
         { status: 400 }
@@ -57,15 +60,18 @@ export async function POST(request: Request) {
 
     const newsData = {
       title: body.title,
-      content: body.content,
+      content: body.content || body.excerpt, // contentがない場合はexcerptを使用
       excerpt: body.excerpt,
       category: body.category,
       isImportant: body.isImportant || false,
       publishedAt: new Date(body.publishedAt || Date.now()),
       author: body.author || '管理者'
     };
-
+    
+    console.log('Firestoreに作成するデータ:', newsData);
+    
     const id = await createNews(newsData);
+    console.log('Firestore作成結果ID:', id);
     
     if (id) {
       return NextResponse.json({

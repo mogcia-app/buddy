@@ -8,7 +8,6 @@ function CreateNews() {
   const router = useRouter();
   const [formData, setFormData] = useState({
     title: '',
-    content: '',
     excerpt: '',
     category: 'announcement',
     isImportant: false
@@ -20,6 +19,7 @@ function CreateNews() {
     setLoading(true);
 
     try {
+      // 一時的に通常のfetchでテスト
       const response = await fetch('/api/news', {
         method: 'POST',
         headers: {
@@ -27,11 +27,12 @@ function CreateNews() {
         },
         body: JSON.stringify({
           ...formData,
+          content: formData.excerpt, // 本文は概要と同じにする
           publishedAt: new Date().toISOString(),
           author: '管理者'
         }),
       });
-
+      
       const result = await response.json();
 
       if (result.success) {
@@ -160,25 +161,6 @@ function CreateNews() {
                 />
               </div>
 
-              {/* 本文 */}
-              <div>
-                <label htmlFor="content" className="block text-sm font-medium text-gray-700 mb-2">
-                  本文 <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="content"
-                  name="content"
-                  value={formData.content}
-                  onChange={handleChange}
-                  required
-                  rows={12}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="お知らせの詳細内容を入力してください"
-                />
-                <p className="mt-2 text-sm text-gray-500">
-                  改行は自動的に反映されます。
-                </p>
-              </div>
             </div>
           </div>
 
@@ -204,7 +186,7 @@ function CreateNews() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{formData.title}</h3>
                 <p className="text-gray-600 mb-4">{formData.excerpt}</p>
-                <div className="text-gray-800 whitespace-pre-wrap">{formData.content}</div>
+                <div className="text-gray-800 whitespace-pre-wrap">{formData.excerpt}</div>
               </div>
             </div>
           )}
