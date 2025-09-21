@@ -122,10 +122,10 @@ export default function Home() {
             
             {/* CTAボタン */}
             <div className="flex flex-col gap-4 animate-fade-in-up opacity-0" style={{animationDelay: '1.0s', animationFillMode: 'forwards'}}>
-              <Link href="/contact" className="px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-all duration-300">
+              <Link href="/contact" className="btn btn-primary">
                 無料相談を始める
               </Link>
-              <Link href="#services" className="px-8 py-4 bg-transparent text-gray-900 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 transition-all duration-300">
+              <Link href="#services" className="btn btn-secondary">
                 サービス一覧
               </Link>
             </div>
@@ -152,10 +152,10 @@ export default function Home() {
 
               {/* CTAボタン */}
               <div className="flex flex-col sm:flex-row gap-4 justify-start animate-fade-in-up opacity-0" style={{animationDelay: '1.0s', animationFillMode: 'forwards'}}>
-                <Link href="/contact" className="px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition-all duration-300">
+                <Link href="/contact" className="btn btn-primary">
                   無料相談を始める
                 </Link>
-                <Link href="#services" className="px-8 py-4 bg-transparent text-gray-900 rounded-lg font-medium border border-gray-300 hover:bg-gray-50 hover:scale-105 transition-all duration-300">
+                <Link href="#services" className="btn btn-secondary">
                   サービス一覧
                 </Link>
               </div>
@@ -372,7 +372,7 @@ export default function Home() {
           </div>
 
           <div className="text-center animate-fade-in-up opacity-0" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
-            <Link href="/about" className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition-all duration-300">
+            <Link href="/about" className="btn btn-primary">
               VIEW MORE
             </Link>
           </div>
@@ -524,11 +524,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center animate-fade-in-up opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
-            <Link href="/about" className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition-all duration-300">
-              詳しく見る
-            </Link>
-          </div>
+            <div className="text-center animate-fade-in-up opacity-0" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
+              <Link href="/about" className="btn btn-primary">
+                詳しく見る
+              </Link>
+            </div>
         </div>
       </section>
 
@@ -732,7 +732,7 @@ export default function Home() {
               厨房運営からAI技術まで、様々な事業を通じて<br />
               お客様の真の「バディ」として共に成長する仲間を募集しています
             </h3>
-            <Link href="/recruit" className="inline-flex items-center px-8 py-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 hover:scale-105 hover:shadow-lg transition-all duration-300">
+            <Link href="/recruit" className="btn btn-primary">
               採用情報を見る
             </Link>
           </div>

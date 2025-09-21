@@ -40,7 +40,7 @@ export default function ContactSection({
         {/* 連絡先カード */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* 電話 */}
-          <div className="bg-white p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+          <div className="card-elevated p-8 animate-fade-in-up opacity-0" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 flex items-center justify-center">
                 <svg className="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export default function ContactSection({
           </div>
           
           {/* メール */}
-          <div className="bg-white p-8 hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-500 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+          <div className="card-elevated p-8 animate-fade-in-up opacity-0" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
             <div className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 bg-gray-100 flex items-center justify-center">
                 <svg className="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function ContactSection({
         <div className="text-center animate-fade-in-up opacity-0" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
           <Link 
             href={ctaHref} 
-            className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-medium hover:bg-gray-50 hover:scale-105 hover:shadow-lg transition-all duration-300"
+            className="btn bg-white text-gray-900 hover:bg-gray-50 inline-flex items-center"
           >
             {ctaText}
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

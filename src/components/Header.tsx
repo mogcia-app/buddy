@@ -10,7 +10,7 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b-4 border-black shadow-lg">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4 md:py-6">
           {/* ロゴ */}
@@ -23,7 +23,7 @@ export default function Header() {
               className="w-10 h-10 sm:w-12 sm:h-12"
             />
             <div className="flex flex-col">
-              <h1 className="text-[15px] sm:text-2xl font-bold text-gray-800">株式会社バディ</h1>
+              <h1 className="text-[15px] sm:text-2xl font-bold text-gradient-primary">株式会社バディ</h1>
             </div>
           </Link>
 
@@ -148,9 +148,9 @@ export default function Header() {
               )}
             </div>
             
-            <Link href="/sdgs" className="text-gray-700 hover:text-gray-900 transition-colors font-medium">社会への取り組み</Link>
-            <Link href="/recruit" className="px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-900 hover:text-white rounded-lg transition-all duration-300 font-medium">採用情報</Link>
-            <Link href="/contact" className="px-4 py-2 bg-black text-white hover:bg-gray-800 rounded-lg transition-all duration-300 font-medium">お問い合わせ</Link>
+            <Link href="/sdgs" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">社会への取り組み</Link>
+            <Link href="/recruit" className="btn btn-secondary">採用情報</Link>
+            <Link href="/contact" className="btn btn-primary">お問い合わせ</Link>
           </nav>
 
           {/* モバイルメニューボタン */}
