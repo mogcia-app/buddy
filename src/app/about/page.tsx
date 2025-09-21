@@ -119,56 +119,97 @@ export default function About() {
         </div>
       </section>
 
-      {/* 代表メッセージ - シンプル版 */}
+      {/* アクセス・地図情報 */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 md:px-8">
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium text-gray-500 tracking-wider uppercase">Message</span>
+            <span className="text-sm font-medium text-gray-500 tracking-wider uppercase">Access</span>
             <h2 className="text-3xl md:text-4xl font-light text-gray-900 mt-4 mb-8">
-              代表メッセージ
+              アクセス
             </h2>
             <div className="section-divider"></div>
           </div>
           
-          <div className="bg-gray-50 rounded-lg p-8 md:p-12">
-            <div className="text-center mb-8">
-              <div className="w-24 h-24 bg-gradient-to-r from-gray-700 to-black rounded-full mx-auto mb-4 flex items-center justify-center">
-                <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* 左側：アクセス情報 */}
+            <div className="space-y-8">
+              <div className="bg-gray-50 rounded-lg p-8">
+                <h3 className="text-xl font-medium text-gray-900 mb-6">所在地</h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-gray-600 text-sm mb-1">住所</p>
+                    <p className="text-gray-900 font-medium">
+                      〒840-0023<br />
+                      佐賀県佐賀市本庄町大字袋123番地8
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-gray-600 text-sm mb-1">電話番号</p>
+                    <p className="text-gray-900 font-medium">0952-97-6705</p>
+                  </div>
+                  
+                  <div>
+                    <p className="text-gray-600 text-sm mb-1">営業時間</p>
+                    <p className="text-gray-900 font-medium">平日 9:00〜18:00</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-medium text-gray-900 mb-2">代表取締役</h3>
-              <p className="text-lg text-gray-700 font-medium">北村 慎也</p>
+              
+              <div className="bg-white border border-gray-200 rounded-lg p-8">
+                <h3 className="text-xl font-medium text-gray-900 mb-4">交通アクセス</h3>
+                <div className="space-y-3 text-gray-600">
+                  <div className="flex items-start">
+                    <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0V7" />
+                    </svg>
+                    <p>JR佐賀駅から車で約15分</p>
+                  </div>
+                  <div className="flex items-start">
+                    <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    <p>佐賀大和ICから車で約10分</p>
+                  </div>
+                  <div className="flex items-start">
+                    <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <p>駐車場完備</p>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <div className="max-w-3xl mx-auto">
-              <div className="space-y-6 text-gray-600 leading-relaxed">
-                <p className="text-lg">
-                  株式会社バディは、飲食店の経営からスタートした会社です。
-                  お客様に美味しい料理を提供し、笑顔になっていただく瞬間に、
-                  「食」を通じて人と人をつなぐ仕事の素晴らしさを実感してきました。
-                </p>
-                
-                <p>
-                  飲食店経営で培った経験を活かし、次に厨房委託業へと展開しました。
-                  介護施設や企業の食堂で、より多くの方々に安全で美味しい食事を提供することで、
-                  「食」への想いをさらに深めることができました。
-                </p>
-                
-                <p>
-                  その後、お客様から「Webサイトも作ってもらえないか」「SNSの運用も手伝って欲しい」
-                  といったご相談をいただくようになりました。そこで気づいたのは、
-                  お客様が求めているのは「何でも相談できる信頼できるパートナー」だということです。
-                </p>
-                
-                <div className="bg-white rounded-lg p-6 border-l-4 border-black mt-8">
-                  <p className="text-gray-800 font-medium italic">
-                    「バディ」という社名には、お客様と対等な関係で、
-                    共に課題を解決し、共に成長していきたいという想いを込めました。
-                    飲食店経営から厨房委託業で培った「安全・品質へのこだわり」と「人を想う心」を、
-                    すべての事業の根幹に置き、お客様のビジネス成功をサポートしてまいります。
-                  </p>
-                </div>
+            {/* 右側：Googleマップ */}
+            <div className="relative">
+              <div className="bg-gray-100 rounded-lg overflow-hidden shadow-sm border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.4!2d130.2985!3d33.2635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541a1a1a1a1a1a1%3A0x1a1a1a1a1a1a1a1a!2z5L2Q6LOA55yM5L2Q6LOA5biC5pys5bqE55S65aSn5a2X6KKL!5e0!3m2!1sja!2sjp!4v1632123456789!5m2!1sja!2sjp"
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="株式会社バディ 所在地"
+                  className="w-full h-96"
+                ></iframe>
+              </div>
+              
+              <div className="mt-4 text-center">
+                <a 
+                  href="https://maps.google.com/?q=佐賀県佐賀市本庄町大字袋123番地8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                >
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  Googleマップで開く
+                </a>
               </div>
             </div>
           </div>
