@@ -8,6 +8,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [menuCloseTimeout, setMenuCloseTimeout] = useState<NodeJS.Timeout | null>(null);
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-2 border-black shadow-lg">
@@ -34,8 +35,19 @@ export default function Header() {
             {/* 事業内容ドロップダウン */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => {
+                if (menuCloseTimeout) {
+                  clearTimeout(menuCloseTimeout);
+                  setMenuCloseTimeout(null);
+                }
+                setIsServicesOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => {
+                  setIsServicesOpen(false);
+                }, 300); // 300ms遅延
+                setMenuCloseTimeout(timeout);
+              }}
             >
               <button className="text-gray-700 hover:text-black transition-colors font-medium flex items-center">
                 事業内容
@@ -46,7 +58,21 @@ export default function Header() {
               
               {/* メガメニュー */}
               {isServicesOpen && (
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] max-w-[90vw] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-100/50 p-8 z-50 hidden md:block">
+                <div 
+                  className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] max-w-[90vw] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border border-gray-100/50 p-8 z-50 hidden md:block"
+                  onMouseEnter={() => {
+                    if (menuCloseTimeout) {
+                      clearTimeout(menuCloseTimeout);
+                      setMenuCloseTimeout(null);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    const timeout = setTimeout(() => {
+                      setIsServicesOpen(false);
+                    }, 300);
+                    setMenuCloseTimeout(timeout);
+                  }}
+                >
                   <div className="mb-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-2">事業内容</h3>
                     <p className="text-sm text-gray-600">食からデジタルまで、多角的なソリューションをご提供</p>
