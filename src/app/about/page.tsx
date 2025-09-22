@@ -77,7 +77,7 @@ export default function About() {
                     <span className="text-gray-600 font-medium">設立</span>
                   </div>
                   <div className="w-full md:w-2/3 mt-2 md:mt-0">
-                    <span className="text-gray-900 font-medium">2020年4月</span>
+                    <span className="text-gray-900 font-medium">2018年3月</span>
                   </div>
                 </div>
                 
@@ -86,7 +86,7 @@ export default function About() {
                     <span className="text-gray-600 font-medium">資本金</span>
                   </div>
                   <div className="w-full md:w-2/3 mt-2 md:mt-0">
-                    <span className="text-gray-900 font-medium">1,000万円</span>
+                    <span className="text-gray-900 font-medium">300万円</span>
                   </div>
                 </div>
                 
@@ -110,7 +110,7 @@ export default function About() {
                     <span className="text-gray-600 font-medium">従業員数</span>
                   </div>
                   <div className="w-full md:w-2/3 mt-2 md:mt-0">
-                    <span className="text-gray-900 font-medium">25名</span>
+                    <span className="text-gray-900 font-medium">20名</span>
                   </div>
                 </div>
               </div>
@@ -163,13 +163,13 @@ export default function About() {
                     <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0V7" />
                     </svg>
-                    <p>JR佐賀駅から車で約15分</p>
+                    <p>JR佐賀駅から車で10分</p>
                   </div>
                   <div className="flex items-start">
                     <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
-                    <p>佐賀大和ICから車で約10分</p>
+                    <p>佐賀大和ICから車で20分</p>
                   </div>
                   <div className="flex items-start">
                     <svg className="w-5 h-5 text-gray-400 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
