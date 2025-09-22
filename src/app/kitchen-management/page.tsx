@@ -322,7 +322,6 @@ export default function KitchenManagement() {
                   <p className="text-sm">特別養護老人ホーム</p>
                   <p className="text-sm">有料老人ホーム</p>
                   <p className="text-sm">デイサービスセンター</p>
-                  <p className="text-sm">グループホーム</p>
                   <p className="text-sm">ショートステイ施設</p>
                 </div>
               </div>
@@ -340,7 +339,6 @@ export default function KitchenManagement() {
                   <p className="text-sm">オフィス社員食堂</p>
                   <p className="text-sm">工場食堂</p>
                   <p className="text-sm">病院職員食堂</p>
-                  <p className="text-sm">学校給食</p>
                   <p className="text-sm">その他法人向け給食</p>
                 </div>
               </div>
